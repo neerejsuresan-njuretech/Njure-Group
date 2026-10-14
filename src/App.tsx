@@ -3,11 +3,12 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, { useEffect } from 'react';
-import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import React from 'react';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 import { KeralaBackground } from './components/KeralaBackground';
+import { RouteSEO } from './components/RouteSEO';
 import { HomePage } from './pages/HomePage';
 import { AboutPage } from './pages/AboutPage';
 import { VerticalsPage } from './pages/VerticalsPage';
@@ -15,21 +16,10 @@ import { VisionPage } from './pages/VisionPage';
 import { CareersPage } from './pages/CareersPage';
 import { ContactPage } from './pages/ContactPage';
 
-// Scroll to top helper upon route changes
-function ScrollToTop() {
-  const { pathname } = useLocation();
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
-
-  return null;
-}
-
 export default function App() {
   return (
     <Router>
-      <ScrollToTop />
+      <RouteSEO />
       <div className="min-h-screen bg-[#07192f] text-slate-100 flex flex-col font-sans selection:bg-blue-500/30 selection:text-white relative">
         {/* Subtle Minimal Neon Art Kerala Background Animations */}
         <KeralaBackground />

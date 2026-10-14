@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Njure Group — Redirecting...</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, follow" />
+    <script>
+      // Single Page Apps for GitHub Pages
+      // Redirect direct path URLs to the HashRouter path
+      (function () {
+        var path = window.location.pathname;
+        var search = window.location.search || '';
+        var hash = window.location.hash || '';
+
+        // If path is not root, redirect to root with hash route
+        if (path && path !== '/' && path !== '/index.html') {
+          // Normalize leading slash
+          var targetRoute = path.startsWith('/') ? path : '/' + path;
+          var newUrl = window.location.origin + '/#' + targetRoute + search + hash;
+          window.location.replace(newUrl);
+        } else {
+          window.location.replace(window.location.origin + '/' + search + hash);
+        }
+      })();
+    </script>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #07192f;
+        color: #f1f5f9;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        text-align: center;
+      }
+      .container {
+        padding: 2rem;
+        max-width: 480px;
+      }
+      h1 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+      }
+      p {
+        color: #94a3b8;
+        font-size: 0.95rem;
+        line-height: 1.5;
+      }
+      a {
+        color: #38bdf8;
+        text-decoration: none;
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Njure Group</h1>
+      <p>Redirecting you to the portal...</p>
+      <p><a href="/">Click here if you are not redirected automatically</a></p>
+    </div>
+  </body>
+</html>

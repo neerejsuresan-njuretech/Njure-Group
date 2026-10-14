@@ -1,0 +1,91 @@
+# Robots.txt for Njure Group (https://njuregroup.in)
+# Fully optimized for Search Engines & Generative AI Crawlers
+
+# Default search engine indexing
+User-agent: *
+Allow: /
+Crawl-delay: 1
+
+# OpenAI Search & Generative Crawlers (ChatGPT, SearchGPT, GPT-4, GPT-5)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+# Perplexity AI Search Crawler
+User-agent: PerplexityBot
+Allow: /
+
+# Anthropic Claude Crawlers
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# Google Search, Googlebot & Gemini AI
+User-agent: Googlebot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: GoogleOther
+Allow: /
+
+# Microsoft Bing & Copilot
+User-agent: Bingbot
+Allow: /
+
+User-agent: msnbot
+Allow: /
+
+# Apple Intelligence & Siri
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Meta AI Crawlers
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: Meta-ExternalFetcher
+Allow: /
+
+# Cohere AI
+User-agent: cohere-ai
+Allow: /
+
+# DuckDuckGo, Baidu, Yandex, Yahoo
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Common Crawl & Research
+User-agent: CCBot
+Allow: /
+
+User-agent: Diffbot
+Allow: /
+
+# Sitemaps & Structured AI Manifests
+Sitemap: https://njuregroup.in/sitemap.xml
+
+# LLM Specification File
+# https://njuregroup.in/llms.txt
+# https://njuregroup.in/llms-full.txt
+Host: njuregroup.in

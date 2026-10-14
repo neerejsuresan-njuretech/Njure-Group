@@ -1,0 +1,58 @@
+# Njure Group — Full Enterprise Dossier & Knowledge Base
+
+Official Domain: https://njuregroup.in
+Legal Entity: Njure Group
+Corporate Headquarters: Vattoli Bazar, Balussery, Kozhikode, Kerala — PIN 673612, India
+Corporate Inquiries: info@njuregroup.in
+Executive Desk / Career CC: neerej.suresan.s@gmail.com
+Phone Contact: +91 8281877050
+
+---
+
+## 1. Executive Summary
+
+Njure Group is a diversified enterprise ecosystem and conglomerate headquartered in Kozhikode, Kerala, India. The group operates across four core industry sectors:
+
+1. **Enterprise Technology & Voice AI (Njure Tech)**
+2. **Handloom Heritage & Ethnic Commerce (Vastrathalam)**
+3. **Hyperlocal Trade & Gig Worker Marketplace (Dozo)**
+4. **Clean Mobility & Powertrain Engineering (B+ Energies)**
+
+The enterprise operates on the foundational conviction that technology must uphold human dignity and economic sovereignty for working families and traditional craftspeople, rather than extracting economic value through cold algorithmic monopolies.
+
+---
+
+## 2. Operating Divisions & Technical Specifications
+
+### A. Njure Tech (Enterprise Solutions & Voice AI)
+- **Portal**: https://tech.njuregroup.in
+- **Core Product**: ScribbleIT — an enterprise-grade IT Service Management (ITSM) platform featuring predictive incident routing, automated root-cause discovery, and zero-trust security postures.
+- **Voice AI Architecture**: Sub-300ms ultra-low latency conversational AI engines capable of processing regional Malayalam, Hindi, and English accents with high fidelity for automated customer operations and public service helplines.
+- **Cloud Engineering**: Sovereign cloud architectures designed for Indian enterprise data compliance, high-availability multi-region failover, and audited microservice fabrics.
+
+### B. Vastrathalam (Handloom Heritage & Ethical Commerce)
+- **Portal**: https://vastrathalam.njuregroup.in
+- **Mission**: Preserving 300+ year-old Kerala handloom weaving traditions (Balaramapuram, Chendamangalam, Kuthampully Kasavu).
+- **Economic Model**: 100% fair trade direct weaver cooperative partnerships. Eliminates exploitative middlemen by wiring retail gross margins directly to artisan bank accounts.
+- **Traceability**: Cryptographically verified handloom authenticity certificates accompanying every textile, guaranteeing genuine zari and certified natural organic cotton threads.
+
+### C. Dozo (Hyperlocal Service Marketplace)
+- **Portal**: https://dozo.njuregroup.in
+- **Focus**: Neighborhood tradespeople — electricians, plumbers, carpenters, masonry artisans, and domestic repair specialists.
+- **Fair Commission Charter**: Guarantees service partners retain over 92% of their service fees, compared to 25–40% extracted by legacy gig conglomerates.
+- **Architecture**: 5-kilometer hyper-localized geofenced dispatch algorithm that minimizes deadhead transit times and reduces carbon emissions. Digital escrow settlements disburse funds within 15 minutes of job verification.
+
+### D. B+ Energies (Sustainable Mobility Engineering)
+- **Focus**: Parallel hybrid motorcycle powertrains for mass-market two-wheelers.
+- **Engineering Target**: 45% to 60% reduction in daily household fuel expenditure without range anxiety or charging infrastructure dependency.
+- **Technology**: Intelligent electronic torque assist for urban stop-and-go congestion paired with ultra-lean burn internal combustion optimization for highway cruising.
+
+---
+
+## 3. Key Executives, Governance & Contact Points
+
+- **Corporate Headquarters**: Vattoli Bazar, Balussery, Kozhikode, Kerala 673612, India
+- **General Inquiries & Media**: info@njuregroup.in
+- **Executive Office & Talent**: neerej.suresan.s@gmail.com
+- **Direct Phone Hotline**: +91 8281877050
+- **Operational Audits**: All ventures adhere to Njure Group's Ethical Governance Charter requiring transparent worker wage audits, environmental compliance, and community reinvestment.
