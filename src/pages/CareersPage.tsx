@@ -588,11 +588,6 @@ CC: neerej.suresan.s@gmail.com`;
                     </>
                   )}
                 </button>
-                <p className="text-[11px] text-center text-slate-300 leading-tight">
-                  Submitting formats and routes this application directly to{' '}
-                  <strong className="text-white">info@njuregroup.in</strong> with CC to{' '}
-                  <strong className="text-amber-300">neerej.suresan.s@gmail.com</strong>.
-                </p>
               </div>
             </form>
           )}
