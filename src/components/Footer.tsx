@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowUp, ExternalLink, Heart, MapPin, Mail } from 'lucide-react';
+import { ArrowUp, ExternalLink, Heart, MapPin, Mail, Phone } from 'lucide-react';
 import { NjureEmblem } from './Logo';
 
 export const Footer: React.FC = () => {
@@ -9,7 +9,7 @@ export const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="bg-[#051325] text-slate-400 border-t border-white/10 pt-16 pb-12">
+    <footer className="bg-[#051325] text-slate-400 border-t border-white/10 pt-16 pb-12 relative z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Main Footer Row */}
@@ -35,15 +35,21 @@ export const Footer: React.FC = () => {
               traditions and sustainable clean mobility.
             </p>
 
-            <div className="pt-2 text-xs text-slate-400 space-y-1.5">
+            <div className="pt-2 text-xs text-slate-400 space-y-2">
               <div className="flex items-center gap-2">
                 <MapPin className="w-3.5 h-3.5 text-blue-400 shrink-0" />
                 <span>Vattoli Bazar, Balussery, Kozhikode, Kerala — 673612</span>
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="w-3.5 h-3.5 text-blue-400 shrink-0" />
-                <a href="mailto:contact@njuregroup.in" className="hover:text-white transition-colors">
-                  contact@njuregroup.in
+                <a href="mailto:info@njuregroup.in" className="hover:text-white transition-colors">
+                  info@njuregroup.in
+                </a>
+              </div>
+              <div className="flex items-center gap-2">
+                <Phone className="w-3.5 h-3.5 text-blue-400 shrink-0" />
+                <a href="tel:+918281877050" className="hover:text-white transition-colors font-mono-numbers">
+                  +91 8281877050
                 </a>
               </div>
             </div>

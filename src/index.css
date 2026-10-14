@@ -26,8 +26,85 @@
 
 /* Minimal, quiet corporate radial glow */
 .bg-corporate-canvas {
-  background-color: #07192f;
+  background-color: transparent;
   background-image: 
-    radial-gradient(at 0% 0%, rgba(30, 64, 175, 0.12) 0px, transparent 50%),
-    radial-gradient(at 100% 100%, rgba(14, 116, 144, 0.08) 0px, transparent 50%);
+    radial-gradient(at 0% 0%, rgba(30, 64, 175, 0.15) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(14, 116, 144, 0.10) 0px, transparent 50%);
 }
+
+@keyframes keralaFloatSlow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-16px) rotate(1.2deg);
+  }
+}
+
+@keyframes keralaFloatReverse {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(14px) rotate(-1deg);
+  }
+}
+
+/* 50% to 65% visibility with luminous neon ambient glow */
+@keyframes keralaNeonBreathe {
+  0%, 100% {
+    opacity: 0.52;
+    filter: drop-shadow(0 0 8px currentColor) drop-shadow(0 0 20px currentColor);
+  }
+  50% {
+    opacity: 0.65;
+    filter: drop-shadow(0 0 14px currentColor) drop-shadow(0 0 32px currentColor);
+  }
+}
+
+@keyframes keralaNeonPulse {
+  0%, 100% {
+    opacity: 0.50;
+    filter: drop-shadow(0 0 10px currentColor) drop-shadow(0 0 22px currentColor);
+  }
+  50% {
+    opacity: 0.65;
+    filter: drop-shadow(0 0 18px currentColor) drop-shadow(0 0 36px currentColor);
+  }
+}
+
+@keyframes waterRipple {
+  0% {
+    transform: translateX(0) scaleY(1);
+    opacity: 0.50;
+  }
+  50% {
+    transform: translateX(-25px) scaleY(1.08);
+    opacity: 0.65;
+  }
+  100% {
+    transform: translateX(0) scaleY(1);
+    opacity: 0.50;
+  }
+}
+
+.animate-kerala-float-1 {
+  animation: keralaFloatSlow 16s ease-in-out infinite;
+}
+
+.animate-kerala-float-2 {
+  animation: keralaFloatReverse 20s ease-in-out infinite;
+}
+
+.animate-neon-breathe {
+  animation: keralaNeonBreathe 6s ease-in-out infinite;
+}
+
+.animate-neon-pulse {
+  animation: keralaNeonPulse 8s ease-in-out infinite;
+}
+
+.animate-water-ripple {
+  animation: waterRipple 18s ease-in-out infinite;
+}
+

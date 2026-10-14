@@ -33,7 +33,7 @@ export const Philosophy: React.FC = () => {
   ];
 
   return (
-    <section id="vision" className="py-20 md:py-28 bg-[#081d36] border-b border-white/10 relative">
+    <section id="vision" className="py-20 md:py-28 bg-[#081d36]/80 backdrop-blur-sm border-b border-white/10 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}

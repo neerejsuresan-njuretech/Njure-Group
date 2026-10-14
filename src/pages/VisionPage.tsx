@@ -5,7 +5,7 @@ import { Philosophy } from '../components/Philosophy';
 
 export const VisionPage: React.FC = () => {
   return (
-    <div className="bg-[#07192f] bg-corporate-canvas py-16 md:py-24">
+    <div className="bg-transparent bg-corporate-canvas py-16 md:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
         
         {/* Header */}

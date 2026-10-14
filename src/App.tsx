@@ -7,6 +7,7 @@ import React, { useEffect } from 'react';
 import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
+import { KeralaBackground } from './components/KeralaBackground';
 import { HomePage } from './pages/HomePage';
 import { AboutPage } from './pages/AboutPage';
 import { VerticalsPage } from './pages/VerticalsPage';
@@ -29,12 +30,15 @@ export default function App() {
   return (
     <Router>
       <ScrollToTop />
-      <div className="min-h-screen bg-[#07192f] text-slate-100 flex flex-col font-sans selection:bg-blue-500/30 selection:text-white">
+      <div className="min-h-screen bg-[#07192f] text-slate-100 flex flex-col font-sans selection:bg-blue-500/30 selection:text-white relative">
+        {/* Subtle Minimal Neon Art Kerala Background Animations */}
+        <KeralaBackground />
+
         {/* Persistent Multi-Page Navigation */}
         <Navbar />
 
         {/* Dynamic Route View */}
-        <main className="flex-grow">
+        <main className="flex-grow relative z-10">
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />

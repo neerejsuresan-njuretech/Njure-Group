@@ -45,16 +45,57 @@ export const Contact: React.FC<ContactProps> = ({
     return Object.keys(errs).length === 0;
   };
 
+  const [mailtoLink, setMailtoLink] = useState('');
+  const [copied, setCopied] = useState(false);
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!validate()) return;
 
     setIsSubmitting(true);
-    // Simulate API request latency
+
+    const recipient = 'info@njuregroup.in';
+    const subject = `[Njure Group Inquiry] ${formData.vertical} - ${formData.name}`;
+    const body = `Corporate Inquiry for Njure Group
+==================================================
+From: ${formData.name}
+Email: ${formData.email}
+Vertical / Area of Focus: ${formData.vertical}
+
+Message:
+${formData.message}
+==================================================
+Transmitted via Njure Group Corporate Portal
+Corporate Office: Vattoli Bazar, Balussery, Kozhikode, Kerala - 673612
+Direct Contact: info@njuregroup.in | +91 8281877050`;
+
+    const url = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    setMailtoLink(url);
+
+    // Trigger user's mail client with prefilled data safely
+    try {
+      const link = document.createElement('a');
+      link.href = url;
+      link.target = '_blank';
+      link.rel = 'noopener noreferrer';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    } catch {
+      // Fallback handled in UI
+    }
+
     setTimeout(() => {
       setIsSubmitting(false);
       setIsSubmitted(true);
-    }, 600);
+    }, 400);
+  };
+
+  const handleCopy = () => {
+    const text = `Name: ${formData.name}\nEmail: ${formData.email}\nVertical: ${formData.vertical}\n\nMessage:\n${formData.message}`;
+    navigator.clipboard.writeText(text);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2500);
   };
 
   const resetForm = () => {
@@ -66,10 +107,11 @@ export const Contact: React.FC<ContactProps> = ({
     });
     setErrors({});
     setIsSubmitted(false);
+    setCopied(false);
   };
 
   return (
-    <section id="contact" className="py-20 md:py-28 bg-[#07192f] border-b border-white/10 relative">
+    <section id="contact" className="py-20 md:py-28 bg-[#07192f]/80 backdrop-blur-sm border-b border-white/10 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
@@ -119,10 +161,22 @@ export const Contact: React.FC<ContactProps> = ({
                     Electronic Inquiries
                   </div>
                   <a
-                    href="mailto:contact@njuregroup.in"
-                    className="text-white hover:text-blue-300 transition-colors font-medium"
+                    href="mailto:info@njuregroup.in"
+                    className="text-white hover:text-blue-300 transition-colors font-medium text-base"
                   >
-                    contact@njuregroup.in
+                    info@njuregroup.in
+                  </a>
+                </div>
+
+                <div className="pt-4 border-t border-white/10">
+                  <div className="text-xs text-slate-400 uppercase tracking-wider mb-1">
+                    Direct Telephone
+                  </div>
+                  <a
+                    href="tel:+918281877050"
+                    className="text-white hover:text-blue-300 transition-colors font-medium font-mono-numbers text-base"
+                  >
+                    +91 8281877050
                   </a>
                 </div>
 
@@ -170,21 +224,47 @@ export const Contact: React.FC<ContactProps> = ({
             <div className="p-8 rounded-2xl bg-[#081d36] border border-white/10 shadow-xl">
               
               {isSubmitted ? (
-                <div className="py-12 flex flex-col items-center text-center space-y-4">
+                <div className="py-10 flex flex-col items-center text-center space-y-4">
                   <div className="p-4 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400">
                     <CheckCircle2 className="w-10 h-10" />
                   </div>
                   <h3 className="text-2xl font-bold text-white">
-                    Inquiry Received
+                    Inquiry Formatted for info@njuregroup.in
                   </h3>
                   <p className="text-sm text-slate-300 max-w-md leading-relaxed">
                     Thank you, <strong className="text-white">{formData.name}</strong>. Your message regarding{' '}
-                    <span className="text-blue-300 font-medium">{formData.vertical}</span> has been logged with our corporate office.
+                    <span className="text-blue-300 font-medium">{formData.vertical}</span> has been prepared and linked to our official email desk.
                   </p>
-                  <div className="pt-4">
+
+                  <div className="p-4 rounded-xl bg-white/[0.04] border border-white/10 w-full max-w-md text-left text-xs text-slate-300 space-y-1.5">
+                    <div className="text-slate-400 font-mono text-[11px] uppercase">Destination</div>
+                    <div className="text-white font-medium">info@njuregroup.in</div>
+                    <div className="text-slate-400 font-mono text-[11px] uppercase pt-1">Subject</div>
+                    <div className="text-sky-300 truncate">[Njure Group Inquiry] {formData.vertical} - {formData.name}</div>
+                  </div>
+
+                  <div className="flex flex-col sm:flex-row items-center gap-3 pt-2 w-full max-w-md">
+                    {mailtoLink && (
+                      <a
+                        href={mailtoLink}
+                        className="w-full sm:w-1/2 inline-flex items-center justify-center gap-2 px-4 py-2.5 text-xs font-semibold text-white bg-blue-600 hover:bg-blue-500 rounded-lg shadow-lg transition-colors"
+                      >
+                        <Mail className="w-4 h-4" />
+                        <span>Launch Mail App</span>
+                      </a>
+                    )}
+                    <button
+                      onClick={handleCopy}
+                      className="w-full sm:w-1/2 inline-flex items-center justify-center gap-1.5 px-4 py-2.5 text-xs font-medium text-slate-200 hover:text-white bg-white/10 hover:bg-white/15 border border-white/10 rounded-lg transition-colors cursor-pointer"
+                    >
+                      {copied ? 'Copied to Clipboard!' : 'Copy Inquiry Text'}
+                    </button>
+                  </div>
+
+                  <div className="pt-2">
                     <button
                       onClick={resetForm}
-                      className="px-5 py-2.5 text-xs font-semibold text-white bg-blue-600 hover:bg-blue-500 rounded-lg transition-colors cursor-pointer"
+                      className="text-xs text-slate-400 hover:text-slate-200 underline cursor-pointer"
                     >
                       Submit Another Inquiry
                     </button>
@@ -288,14 +368,14 @@ export const Contact: React.FC<ContactProps> = ({
                   </div>
 
                   {/* Submit Button */}
-                  <div className="pt-2">
+                  <div className="pt-2 space-y-2">
                     <button
                       type="submit"
                       disabled={isSubmitting}
                       className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 text-sm font-semibold text-white bg-blue-600 hover:bg-blue-500 disabled:bg-blue-800 rounded-lg shadow-lg shadow-blue-900/30 transition-all cursor-pointer"
                     >
                       {isSubmitting ? (
-                        <span>Logging Inquiry...</span>
+                        <span>Preparing Email...</span>
                       ) : (
                         <>
                           <span>Transmit Corporate Inquiry</span>
@@ -303,6 +383,9 @@ export const Contact: React.FC<ContactProps> = ({
                         </>
                       )}
                     </button>
+                    <p className="text-[11px] text-center text-slate-400">
+                      Submitting compiles and opens this inquiry addressed to <strong className="text-slate-200">info@njuregroup.in</strong>.
+                    </p>
                   </div>
                 </form>
               )}

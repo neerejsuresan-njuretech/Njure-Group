@@ -178,7 +178,7 @@ export const Verticals: React.FC<VerticalsProps> = ({ onSelectInquiryVertical })
   };
 
   return (
-    <section id="verticals" className="py-20 md:py-28 bg-[#07192f] border-b border-white/10 relative">
+    <section id="verticals" className="py-20 md:py-28 bg-[#07192f]/80 backdrop-blur-sm border-b border-white/10 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
