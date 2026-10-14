@@ -1,0 +1,6 @@
+{
+  "name": "Njure Group",
+  "description": "Corporate portal of Njure Group — a diversified enterprise ecosystem driving innovation across technology, digital apparel, hyperlocal marketplaces, and sustainable mobility.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
