@@ -137,7 +137,7 @@ export const FAQ: React.FC = () => {
           </div>
 
           <Link
-            to="/contact"
+            to="/contact/"
             className="inline-flex items-center gap-1.5 px-4 py-2 text-xs font-semibold text-white bg-blue-600 hover:bg-blue-500 rounded-lg transition-colors whitespace-nowrap shrink-0"
           >
             <span>Contact Corporate Desk</span>

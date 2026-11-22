@@ -80,7 +80,7 @@ export const HomePage: React.FC = () => {
               {/* Action Buttons */}
               <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-4 w-full sm:w-auto">
                 <Link
-                  to="/verticals"
+                  to="/verticals/"
                   className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 text-sm font-semibold text-white bg-blue-600 hover:bg-blue-500 rounded-lg shadow-lg shadow-blue-900/30 active:scale-[0.98] transition-all whitespace-nowrap"
                 >
                   <span>Explore Our Verticals</span>
@@ -88,7 +88,7 @@ export const HomePage: React.FC = () => {
                 </Link>
 
                 <Link
-                  to="/about"
+                  to="/about/"
                   className="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-sm font-medium text-slate-200 hover:text-white bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 rounded-lg backdrop-blur-sm active:scale-[0.98] transition-all whitespace-nowrap"
                 >
                   <span>Our Story &amp; Ethos</span>
@@ -191,7 +191,7 @@ export const HomePage: React.FC = () => {
 
                 <div className="pt-2 text-center">
                   <Link
-                    to="/verticals"
+                    to="/verticals/"
                     className="text-xs text-slate-400 hover:text-white transition-colors inline-flex items-center gap-1"
                   >
                     <span>View comprehensive technical roadmaps</span>
@@ -347,7 +347,7 @@ export const HomePage: React.FC = () => {
             <span>
               All initiatives are audited under our internal ethical governance charter, guaranteeing transparent margins and direct worker welfare.
             </span>
-            <Link to="/vision" className="text-sky-400 hover:text-sky-300 font-semibold whitespace-nowrap inline-flex items-center gap-1">
+            <Link to="/vision/" className="text-sky-400 hover:text-sky-300 font-semibold whitespace-nowrap inline-flex items-center gap-1">
               <span>Read our ESG charter</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </Link>
@@ -375,7 +375,7 @@ export const HomePage: React.FC = () => {
             </div>
 
             <Link
-              to="/verticals"
+              to="/verticals/"
               className="inline-flex items-center gap-1.5 text-sm font-semibold text-blue-400 hover:text-blue-300 transition-colors shrink-0"
             >
               <span>Explore all vertical roadmaps</span>
@@ -439,7 +439,7 @@ export const HomePage: React.FC = () => {
                   )}
 
                   <Link
-                    to="/verticals"
+                    to="/verticals/"
                     className="inline-flex items-center gap-1 text-xs font-semibold text-white hover:text-blue-300 transition-colors"
                   >
                     <span>Read Full Brief</span>
@@ -478,19 +478,19 @@ export const HomePage: React.FC = () => {
 
           <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
-              to="/about"
+              to="/about/"
               className="px-6 py-3 text-sm font-semibold text-white bg-blue-600 hover:bg-blue-500 rounded-lg transition-colors"
             >
               Discover Our Roots in Kozhikode
             </Link>
             <Link
-              to="/careers"
+              to="/careers/"
               className="px-6 py-3 text-sm font-medium text-slate-200 hover:text-white bg-white/10 hover:bg-white/15 border border-white/15 rounded-lg transition-colors"
             >
               Careers at Njure
             </Link>
             <Link
-              to="/contact"
+              to="/contact/"
               className="px-6 py-3 text-sm font-medium text-slate-300 hover:text-white bg-white/5 border border-white/10 rounded-lg transition-colors"
             >
               Initiate Corporate Dialogue

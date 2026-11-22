@@ -9,12 +9,15 @@ export const Navbar: React.FC = () => {
 
   const navLinks = [
     { label: 'Home', path: '/' },
-    { label: 'About Us', path: '/about' },
-    { label: 'Our Verticals', path: '/verticals' },
-    { label: 'Vision & Impact', path: '/vision' },
-    { label: 'Careers', path: '/careers' },
-    { label: 'Contact', path: '/contact' },
+    { label: 'About Us', path: '/about/' },
+    { label: 'Our Verticals', path: '/verticals/' },
+    { label: 'Vision & Impact', path: '/vision/' },
+    { label: 'Careers', path: '/careers/' },
+    { label: 'Contact', path: '/contact/' },
   ];
+
+  const normalize = (p: string) => p.replace(/\/+$/, '').toLowerCase() || '/';
+  const currentPath = normalize(location.pathname);
 
   const closeMobile = () => setMobileMenuOpen(false);
 
@@ -44,7 +47,7 @@ export const Navbar: React.FC = () => {
           {/* Navigation Links (Desktop) */}
           <nav className="hidden lg:flex items-center gap-7 text-sm font-medium text-slate-300">
             {navLinks.map((link) => {
-              const isActive = location.pathname === link.path;
+              const isActive = currentPath === normalize(link.path);
               return (
                 <Link
                   key={link.path}
@@ -64,7 +67,7 @@ export const Navbar: React.FC = () => {
           {/* Primary Action Button (Desktop) & Mobile Hamburger */}
           <div className="flex items-center gap-4 shrink-0">
             <Link
-              to="/contact"
+              to="/contact/"
               className="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 text-xs font-semibold tracking-wide uppercase text-white bg-blue-600 hover:bg-blue-500 rounded-lg shadow-sm hover:shadow-blue-500/20 active:scale-[0.98] transition-all whitespace-nowrap shrink-0"
             >
               <span>Partner With Us</span>
@@ -90,7 +93,7 @@ export const Navbar: React.FC = () => {
         <div className="lg:hidden border-b border-white/10 bg-[#07192f] px-4 pt-3 pb-6 space-y-3">
           <nav className="flex flex-col space-y-1">
             {navLinks.map((link) => {
-              const isActive = location.pathname === link.path;
+              const isActive = currentPath === normalize(link.path);
               return (
                 <Link
                   key={link.path}
@@ -110,7 +113,7 @@ export const Navbar: React.FC = () => {
 
           <div className="pt-3 border-t border-white/10">
             <Link
-              to="/contact"
+              to="/contact/"
               onClick={closeMobile}
               className="w-full flex items-center justify-center gap-2 px-4 py-3 text-sm font-semibold text-white bg-blue-600 hover:bg-blue-500 rounded-lg shadow-sm"
             >

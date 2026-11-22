@@ -470,7 +470,7 @@ CC: neerej.suresan.s@gmail.com`;
                   Submit Another Profile
                 </button>
                 <span className="text-white/20">•</span>
-                <Link to="/verticals" className="text-blue-300 hover:underline">
+                <Link to="/verticals/" className="text-blue-300 hover:underline">
                   Explore Operating Verticals
                 </Link>
               </div>
@@ -607,12 +607,12 @@ CC: neerej.suresan.s@gmail.com`;
           </div>
 
           <div className="flex items-center gap-4">
-            <Link to="/verticals" className="inline-flex items-center gap-1 text-blue-300 hover:text-white transition-colors">
+            <Link to="/verticals/" className="inline-flex items-center gap-1 text-blue-300 hover:text-white transition-colors">
               <span>Explore All Verticals</span>
               <ArrowUpRight className="w-3.5 h-3.5" />
             </Link>
             <span className="text-white/20">•</span>
-            <Link to="/about" className="inline-flex items-center gap-1 text-blue-300 hover:text-white transition-colors">
+            <Link to="/about/" className="inline-flex items-center gap-1 text-blue-300 hover:text-white transition-colors">
               <span>Our Kozhikode Story</span>
               <ArrowUpRight className="w-3.5 h-3.5" />
             </Link>

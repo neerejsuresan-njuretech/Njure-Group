@@ -109,7 +109,7 @@ export const VisionPage: React.FC = () => {
             </p>
           </div>
           <Link
-            to="/contact?subject=Institutional+Governance"
+            to="/contact/?subject=Institutional+Governance"
             className="inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold text-white bg-blue-600 hover:bg-blue-500 rounded-lg transition-colors whitespace-nowrap shrink-0"
           >
             <span>Engage With Leadership</span>

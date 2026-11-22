@@ -1,79 +1,67 @@
 import { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
+import { getRouteSeo } from '../seo/routes';
 
-interface RouteMeta {
-  title: string;
-  description: string;
+function upsertMeta(selector: string, attrName: 'name' | 'property', attrValue: string, content: string) {
+  let tag = document.querySelector<HTMLMetaElement>(selector);
+  if (!tag) {
+    tag = document.createElement('meta');
+    tag.setAttribute(attrName, attrValue);
+    document.head.appendChild(tag);
+  }
+  tag.setAttribute('content', content);
 }
 
-const ROUTE_SEO_MAP: Record<string, RouteMeta> = {
-  '/': {
-    title: 'Njure Group — Enterprise Technology, Handloom Heritage & Clean Mobility',
-    description:
-      'Corporate portal of Njure Group — a diversified enterprise ecosystem driving next-generation innovation across enterprise technology, handloom heritage apparel, hyperlocal marketplaces, and sustainable mobility.',
-  },
-  '/about': {
-    title: 'About Us | Njure Group — Kerala Roots & Enterprise Ambition',
-    description:
-      'Learn about Njure Group’s origins in Kozhikode, our leadership philosophy, cultural preservation, and our conviction that technology must uplift human dignity.',
-  },
-  '/verticals': {
-    title: 'Operating Divisions | Njure Tech, Vastrathalam, Dozo, B+ Energies',
-    description:
-      'Explore Njure Group’s 4 core operating divisions: Njure Tech (ITSM & Voice AI), Vastrathalam (Authentic Handloom Kasavu), Dozo (Hyperlocal Trade), and B+ Energies (Clean Hybrid Mobility).',
-  },
-  '/vision': {
-    title: 'Our Vision & ESG Charter | Njure Group',
-    description:
-      'Read Njure Group’s Ethical Governance Charter, worker economic guarantees for Kerala weavers, gig partner dignity protections, and our long-term generational roadmap.',
-  },
-  '/careers': {
-    title: 'Careers & Open Roles | Njure Group',
-    description:
-      'Join our multidisciplinary team at Njure Group. Explore high-impact roles in engineering, artisan operations, and leadership. Direct applications route to info@njuregroup.in.',
-  },
-  '/contact': {
-    title: 'Contact Corporate Desk | Njure Group',
-    description:
-      'Initiate corporate dialogue with Njure Group. Reach our executive office in Vattoli Bazar, Balussery, Kozhikode, Kerala at info@njuregroup.in or call +91 8281877050.',
-  },
-};
-
 export function RouteSEO() {
-  const { pathname } = useLocation();
+  const { pathname, hash } = useLocation();
+  const navigate = useNavigate();
+
+  // Gracefully upgrade legacy HashRouter URLs (e.g. /#/about -> /about/)
+  useEffect(() => {
+    if (hash && hash.startsWith('#/')) {
+      const target = hash.slice(1).replace(/\/+$/, '');
+      navigate(target ? `${target}/` : '/', { replace: true });
+    }
+  }, [hash, navigate]);
 
   useEffect(() => {
-    // Scroll to top upon route change
     window.scrollTo({ top: 0, behavior: 'instant' });
 
-    // Dynamic SEO Title & Description matching
-    const normalizedPath = pathname.toLowerCase();
-    const meta = ROUTE_SEO_MAP[normalizedPath] || ROUTE_SEO_MAP['/'];
+    const meta = getRouteSeo(pathname);
 
     document.title = meta.title;
 
     // Update meta description
-    let metaDesc = document.querySelector('meta[name="description"]');
-    if (!metaDesc) {
-      metaDesc = document.createElement('meta');
-      metaDesc.setAttribute('name', 'description');
-      document.head.appendChild(metaDesc);
+    upsertMeta('meta[name="description"]', 'name', 'description', meta.description);
+
+    // Update canonical link tag dynamically for every route
+    let canonicalLink = document.querySelector<HTMLLinkElement>('link[rel="canonical"]');
+    if (!canonicalLink) {
+      canonicalLink = document.createElement('link');
+      canonicalLink.setAttribute('rel', 'canonical');
+      document.head.appendChild(canonicalLink);
     }
-    metaDesc.setAttribute('content', meta.description);
+    canonicalLink.setAttribute('href', meta.canonicalUrl);
 
-    // Update OpenGraph Title & Description
-    const ogTitle = document.querySelector('meta[property="og:title"]');
-    if (ogTitle) ogTitle.setAttribute('content', meta.title);
+    // Update OpenGraph metadata
+    upsertMeta('meta[property="og:title"]', 'property', 'og:title', meta.ogTitle);
+    upsertMeta('meta[property="og:description"]', 'property', 'og:description', meta.description);
+    upsertMeta('meta[property="og:url"]', 'property', 'og:url', meta.canonicalUrl);
 
-    const ogDesc = document.querySelector('meta[property="og:description"]');
-    if (ogDesc) ogDesc.setAttribute('content', meta.description);
+    // Update Twitter Card metadata
+    upsertMeta('meta[name="twitter:title"]', 'name', 'twitter:title', meta.title);
+    upsertMeta('meta[name="twitter:description"]', 'name', 'twitter:description', meta.description);
+    upsertMeta('meta[name="twitter:url"]', 'name', 'twitter:url', meta.canonicalUrl);
 
-    // Update OpenGraph URL
-    const ogUrl = document.querySelector('meta[property="og:url"]');
-    if (ogUrl) {
-      const canonicalRoute = normalizedPath === '/' ? 'https://njuregroup.in/' : `https://njuregroup.in/#${normalizedPath}`;
-      ogUrl.setAttribute('content', canonicalRoute);
+    // Sync route-specific JSON-LD structured data
+    let routeJsonLd = document.getElementById('route-jsonld') as HTMLScriptElement | null;
+    if (!routeJsonLd) {
+      routeJsonLd = document.createElement('script');
+      routeJsonLd.id = 'route-jsonld';
+      routeJsonLd.type = 'application/ld+json';
+      document.head.appendChild(routeJsonLd);
     }
+    routeJsonLd.textContent = JSON.stringify(meta.jsonLd);
   }, [pathname]);
 
   return null;

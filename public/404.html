@@ -2,66 +2,78 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Njure Group — Redirecting...</title>
+    <title>Page Not Found – Njure Group</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex, follow" />
     <script>
-      // Single Page Apps for GitHub Pages
-      // Redirect direct path URLs to the HashRouter path
       (function () {
-        var path = window.location.pathname;
-        var search = window.location.search || '';
+        // Gracefully upgrade any legacy HashRouter bookmarks (/#/about -> /about/)
         var hash = window.location.hash || '';
-
-        // If path is not root, redirect to root with hash route
-        if (path && path !== '/' && path !== '/index.html') {
-          // Normalize leading slash
-          var targetRoute = path.startsWith('/') ? path : '/' + path;
-          var newUrl = window.location.origin + '/#' + targetRoute + search + hash;
-          window.location.replace(newUrl);
-        } else {
-          window.location.replace(window.location.origin + '/' + search + hash);
+        if (hash.indexOf('#/') === 0) {
+          var targetPath = hash.slice(1).replace(/\/+$/, '');
+          var cleanUrl = window.location.origin + (targetPath ? targetPath + '/' : '/');
+          window.location.replace(cleanUrl);
         }
       })();
     </script>
     <style>
       body {
         margin: 0;
-        padding: 0;
+        padding: 2rem;
         background-color: #07192f;
         color: #f1f5f9;
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 100vh;
-        text-align: center;
+        min-height: 100vh;
+        box-sizing: border-box;
       }
       .container {
-        padding: 2rem;
-        max-width: 480px;
+        max-width: 520px;
+        text-align: center;
       }
       h1 {
-        font-size: 1.5rem;
-        margin-bottom: 0.5rem;
+        font-size: 1.75rem;
+        margin-bottom: 0.75rem;
       }
       p {
         color: #94a3b8;
         font-size: 0.95rem;
-        line-height: 1.5;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+      }
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        justify-content: center;
       }
       a {
         color: #38bdf8;
         text-decoration: none;
         font-weight: 600;
+        padding: 0.5rem 0.9rem;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 8px;
+      }
+      a:hover {
+        background: rgba(56, 189, 248, 0.12);
       }
     </style>
   </head>
   <body>
     <div class="container">
-      <h1>Njure Group</h1>
-      <p>Redirecting you to the portal...</p>
-      <p><a href="/">Click here if you are not redirected automatically</a></p>
+      <h1>Page Not Found — Njure Group</h1>
+      <p>The page you requested could not be found. Explore our official pages below:</p>
+      <nav aria-label="Njure Group Directory">
+        <a href="/">Home</a>
+        <a href="/about/">About Us</a>
+        <a href="/verticals/">Our Verticals</a>
+        <a href="/vision/">Vision &amp; Impact</a>
+        <a href="/careers/">Careers</a>
+        <a href="/contact/">Contact</a>
+      </nav>
     </div>
   </body>
 </html>

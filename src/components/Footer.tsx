@@ -69,27 +69,27 @@ export const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="hover:text-white transition-colors">
+                <Link to="/about/" className="hover:text-white transition-colors">
                   Our Story &amp; Roots
                 </Link>
               </li>
               <li>
-                <Link to="/verticals" className="hover:text-white transition-colors">
+                <Link to="/verticals/" className="hover:text-white transition-colors">
                   Operating Ecosystem
                 </Link>
               </li>
               <li>
-                <Link to="/vision" className="hover:text-white transition-colors">
+                <Link to="/vision/" className="hover:text-white transition-colors">
                   Vision &amp; Governance
                 </Link>
               </li>
               <li>
-                <Link to="/careers" className="hover:text-white transition-colors">
+                <Link to="/careers/" className="hover:text-white transition-colors">
                   Careers &amp; Life at Njure
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="hover:text-white transition-colors">
+                <Link to="/contact/" className="hover:text-white transition-colors">
                   Corporate Inquiries
                 </Link>
               </li>
@@ -138,7 +138,7 @@ export const Footer: React.FC = () => {
 
               <li>
                 <Link
-                  to="/verticals"
+                  to="/verticals/"
                   className="flex flex-col p-2.5 rounded-lg bg-white/[0.03] hover:bg-white/[0.08] border border-white/5 transition-all"
                 >
                   <div className="flex items-center justify-between text-emerald-400 font-medium">
@@ -153,7 +153,7 @@ export const Footer: React.FC = () => {
 
               <li>
                 <Link
-                  to="/verticals"
+                  to="/verticals/"
                   className="flex flex-col p-2.5 rounded-lg bg-white/[0.03] hover:bg-white/[0.08] border border-white/5 transition-all"
                 >
                   <div className="flex items-center justify-between text-blue-400 font-medium">
