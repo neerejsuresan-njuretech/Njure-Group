@@ -192,9 +192,8 @@ CC: neerej.suresan.s@gmail.com`;
         
         {/* Page Header */}
         <div className="max-w-3xl space-y-4">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-400/20 text-xs font-semibold uppercase tracking-widest text-blue-300">
-            <Briefcase className="w-3.5 h-3.5 text-blue-400" />
-            <span>Careers &amp; Life at Njure Group</span>
+          <div className="text-xs font-semibold tracking-wider text-amber-300">
+            Careers &amp; Life at Njure Group
           </div>
           <h1 className="text-4xl sm:text-5xl font-extrabold text-white tracking-tight [text-wrap:balance]">
             Do World-Class Work. Stay Close to What Truly Matters.
@@ -208,15 +207,15 @@ CC: neerej.suresan.s@gmail.com`;
               <MapPin className="w-4 h-4 text-emerald-400 shrink-0" />
               <span>Headquarters: Balussery, Kozhikode, Kerala</span>
             </span>
-            <span className="text-white/20">•</span>
+            <span className="text-amber-200/30">·</span>
             <span className="flex items-center gap-1.5">
-              <Mail className="w-4 h-4 text-blue-400 shrink-0" />
+              <Mail className="w-4 h-4 text-amber-400 shrink-0" />
               <span>Careers Desk: info@njuregroup.in</span>
             </span>
-            <span className="text-white/20">•</span>
+            <span className="text-amber-200/30">·</span>
             <span className="flex items-center gap-1.5 font-mono-numbers">
               <Phone className="w-4 h-4 text-amber-400 shrink-0" />
-              <a href="tel:+918281877050" className="hover:text-white transition-colors">
+              <a href="tel:+918281877050" className="hover:text-amber-200 transition-colors">
                 +91 8281877050
               </a>
             </span>
@@ -224,7 +223,7 @@ CC: neerej.suresan.s@gmail.com`;
         </div>
 
         {/* Culture Narrative Cards */}
-        <div className="p-8 md:p-10 rounded-2xl bg-[#092548]/70 backdrop-blur-md border border-white/15 grid grid-cols-1 md:grid-cols-3 gap-8 shadow-xl">
+        <div className="p-8 md:p-10 rounded-2xl bg-[#0b261d]/85 backdrop-blur-md border border-amber-200/15 grid grid-cols-1 md:grid-cols-3 gap-8 shadow-xl">
           <div className="space-y-3">
             <div className="flex items-center gap-2 text-rose-300 font-semibold text-sm">
               <Heart className="w-4 h-4 text-rose-400" />
@@ -238,7 +237,7 @@ CC: neerej.suresan.s@gmail.com`;
           </div>
 
           <div className="space-y-3">
-            <div className="flex items-center gap-2 text-sky-300 font-semibold text-sm">
+            <div className="flex items-center gap-2 text-amber-300 font-semibold text-sm">
               <Briefcase className="w-4 h-4" />
               <span>True Cross-Discipline Mastery</span>
             </div>
@@ -264,7 +263,7 @@ CC: neerej.suresan.s@gmail.com`;
         <div className="space-y-8">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
             <div>
-              <div className="text-xs font-semibold uppercase tracking-wider text-blue-400 mb-1">
+              <div className="text-xs font-semibold tracking-wider text-amber-300 mb-1">
                 Strategic Openings
               </div>
               <h2 className="text-2xl sm:text-3xl font-bold text-white">
@@ -273,14 +272,14 @@ CC: neerej.suresan.s@gmail.com`;
             </div>
 
             {/* Category Filter Tabs */}
-            <div className="flex flex-wrap items-center gap-2 p-1 rounded-xl bg-white/5 border border-white/10">
+            <div className="flex flex-wrap items-center gap-2 p-1 rounded-xl bg-[#0b261d] border border-amber-200/15">
               {['All', 'Engineering', 'Textiles', 'Operations', 'Mobility'].map((cat) => (
                 <button
                   key={cat}
                   onClick={() => setSelectedCategory(cat)}
-                  className={`px-3 py-1.5 text-xs font-medium rounded-lg transition-all cursor-pointer ${
+                  className={`px-3 py-1.5 text-xs font-medium rounded-lg transition-all cursor-pointer whitespace-nowrap ${
                     selectedCategory === cat
-                      ? 'bg-blue-600 text-white shadow-sm font-semibold'
+                      ? 'bg-red-700 text-white shadow-sm font-semibold'
                       : 'text-slate-300 hover:text-white hover:bg-white/10'
                   }`}
                 >
@@ -295,52 +294,50 @@ CC: neerej.suresan.s@gmail.com`;
             {filteredRoles.map((role) => (
               <div
                 key={role.id}
-                className="p-6 sm:p-7 rounded-2xl bg-[#081d36]/80 backdrop-blur-md border border-white/15 hover:border-blue-400/50 hover:bg-[#081d36]/90 transition-all flex flex-col justify-between space-y-5 shadow-lg group"
+                className="p-6 sm:p-7 rounded-2xl bg-[#0b261d]/90 backdrop-blur-md border border-amber-200/15 hover:border-amber-300/40 hover:bg-[#0e3024]/95 transition-all flex flex-col justify-between space-y-5 shadow-lg group"
               >
                 <div className="space-y-3">
                   <div className="flex items-center justify-between text-xs">
-                    <span className="font-semibold px-2.5 py-1 rounded-md bg-blue-500/10 text-blue-300 border border-blue-500/20 uppercase tracking-wide">
+                    <span className="font-semibold text-amber-300 tracking-wide">
                       {role.division}
                     </span>
-                    <span className="text-slate-400">{role.type}</span>
+                    <span className="text-slate-300">{role.type}</span>
                   </div>
 
-                  <h3 className="text-xl font-bold text-white group-hover:text-blue-200 transition-colors">
+                  <h3 className="text-xl font-bold text-white group-hover:text-amber-200 transition-colors">
                     {role.title}
                   </h3>
 
                   <div className="flex items-center gap-2 text-xs text-slate-300">
-                    <MapPin className="w-3.5 h-3.5 text-blue-400 shrink-0" />
+                    <MapPin className="w-3.5 h-3.5 text-amber-400 shrink-0" />
                     <span>{role.location}</span>
                   </div>
 
-                  <p className="text-xs sm:text-sm text-slate-300 leading-relaxed pt-1">
+                  <p className="text-xs sm:text-sm text-slate-200 leading-relaxed pt-1">
                     {role.desc}
                   </p>
 
                   {/* Highlights */}
-                  <div className="pt-2 flex flex-wrap gap-1.5">
+                  <div className="pt-2 flex flex-wrap gap-x-3 gap-y-1 text-[11px] text-emerald-200/90">
                     {role.highlights.map((h, i) => (
-                      <span
-                        key={i}
-                        className="text-[11px] px-2 py-0.5 rounded bg-white/[0.04] border border-white/5 text-slate-300"
-                      >
-                        ✓ {h}
+                      <span key={i}>
+                        {i > 0 && <span className="mr-3 text-amber-200/30" aria-hidden="true">·</span>}
+                        {h}
                       </span>
                     ))}
                   </div>
                 </div>
 
-                <div className="pt-4 border-t border-white/10 flex items-center justify-between gap-3">
+                <div className="pt-4 border-t border-amber-200/10 flex items-center justify-between gap-3">
                   <span className="text-xs text-slate-400">
                     Reviewed directly by founders
                   </span>
-                  
+
                   {/* Working Action Button with smooth scrolling to form */}
                   <button
                     type="button"
                     onClick={() => handleApplyClick(role.title, role.division)}
-                    className="inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-semibold text-white bg-blue-600 hover:bg-blue-500 rounded-lg shadow-sm hover:shadow-blue-500/20 active:scale-[0.98] transition-all cursor-pointer"
+                    className="inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-semibold text-white bg-red-700 hover:bg-red-600 rounded-lg shadow-sm hover:shadow-red-900/30 active:scale-[0.98] transition-all cursor-pointer whitespace-nowrap"
                   >
                     <span>Apply for Role</span>
                     <ArrowRight className="w-3.5 h-3.5" />
@@ -374,14 +371,14 @@ CC: neerej.suresan.s@gmail.com`;
           <div className="flex items-center gap-3 shrink-0">
             <a
               href="mailto:info@njuregroup.in?cc=neerej.suresan.s@gmail.com&subject=Njure%20Group%20Direct%20Career%20Application"
-              className="inline-flex items-center gap-2 px-4 py-2.5 text-xs font-semibold text-white bg-white/10 hover:bg-white/20 border border-white/15 rounded-lg transition-colors"
+              className="inline-flex items-center gap-2 px-4 py-2.5 text-xs font-semibold text-white bg-white/10 hover:bg-white/20 border border-amber-200/20 rounded-lg transition-colors"
             >
-              <Mail className="w-4 h-4 text-blue-400" />
+              <Mail className="w-4 h-4 text-amber-400" />
               <span>Email Us Directly</span>
             </a>
             <button
               onClick={copyEmailDirect}
-              className="inline-flex items-center gap-1.5 px-3 py-2.5 text-xs font-medium text-slate-300 hover:text-white bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg transition-colors cursor-pointer"
+              className="inline-flex items-center gap-1.5 px-3 py-2.5 text-xs font-medium text-slate-200 hover:text-white bg-white/5 hover:bg-white/10 border border-amber-200/15 rounded-lg transition-colors cursor-pointer"
             >
               {emailCopied ? (
                 <>
@@ -399,7 +396,7 @@ CC: neerej.suresan.s@gmail.com`;
         </div>
 
         {/* Talent Application Form */}
-        <div id="application-form" className="max-w-2xl mx-auto p-8 md:p-10 rounded-2xl bg-[#081d36]/90 backdrop-blur-md border border-white/20 shadow-2xl">
+        <div id="application-form" className="max-w-2xl mx-auto p-8 md:p-10 rounded-2xl bg-[#0b261d]/92 backdrop-blur-md border border-amber-200/20 shadow-2xl">
           {isSubmitted ? (
             <div className="py-8 flex flex-col items-center text-center space-y-5">
               <div className="inline-flex p-3 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
@@ -410,11 +407,11 @@ CC: neerej.suresan.s@gmail.com`;
               </h3>
               <p className="text-xs sm:text-sm text-slate-200 max-w-md leading-relaxed">
                 Thank you, <strong className="text-white">{formData.name}</strong>. Your talent profile for{' '}
-                <span className="text-blue-300 font-semibold">{formData.role}</span> has been structured and linked to our careers inbox.
+                <span className="text-amber-300 font-semibold">{formData.role}</span> has been structured and linked to our careers inbox.
               </p>
 
               {/* Prefilled destination confirmation card */}
-              <div className="p-4 rounded-xl bg-white/[0.04] border border-white/10 w-full text-left text-xs text-slate-300 space-y-2">
+              <div className="p-4 rounded-xl bg-white/[0.04] border border-amber-200/15 w-full text-left text-xs text-slate-300 space-y-2">
                 <div className="flex items-center justify-between">
                   <span className="text-slate-400 font-mono text-[11px] uppercase">Primary Recipient:</span>
                   <span className="text-white font-medium">info@njuregroup.in</span>
@@ -425,7 +422,7 @@ CC: neerej.suresan.s@gmail.com`;
                 </div>
                 <div className="pt-1 border-t border-white/5">
                   <span className="text-slate-400 font-mono text-[11px] uppercase block mb-0.5">Subject:</span>
-                  <span className="text-sky-300 truncate block">[Njure Group Career Application] {formData.role} - {formData.name}</span>
+                  <span className="text-amber-200 truncate block">[Njure Group Career Application] {formData.role} - {formData.name}</span>
                 </div>
               </div>
 
@@ -436,7 +433,7 @@ CC: neerej.suresan.s@gmail.com`;
                     href={mailtoLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full sm:w-1/2 inline-flex items-center justify-center gap-2 px-4 py-3 text-xs font-semibold text-white bg-blue-600 hover:bg-blue-500 rounded-lg shadow-lg hover:shadow-blue-500/25 transition-all cursor-pointer"
+                    className="w-full sm:w-1/2 inline-flex items-center justify-center gap-2 px-4 py-3 text-xs font-semibold text-white bg-red-700 hover:bg-red-600 rounded-lg shadow-lg hover:shadow-red-900/30 transition-all cursor-pointer"
                   >
                     <Mail className="w-4 h-4" />
                     <span>Open in Email App</span>
@@ -445,7 +442,7 @@ CC: neerej.suresan.s@gmail.com`;
                 <button
                   type="button"
                   onClick={handleCopy}
-                  className="w-full sm:w-1/2 inline-flex items-center justify-center gap-1.5 px-4 py-3 text-xs font-medium text-slate-200 hover:text-white bg-white/10 hover:bg-white/15 border border-white/10 rounded-lg transition-colors cursor-pointer"
+                  className="w-full sm:w-1/2 inline-flex items-center justify-center gap-1.5 px-4 py-3 text-xs font-medium text-slate-200 hover:text-white bg-white/10 hover:bg-white/15 border border-amber-200/15 rounded-lg transition-colors cursor-pointer"
                 >
                   {copied ? (
                     <>
@@ -469,8 +466,8 @@ CC: neerej.suresan.s@gmail.com`;
                 >
                   Submit Another Profile
                 </button>
-                <span className="text-white/20">•</span>
-                <Link to="/verticals/" className="text-blue-300 hover:underline">
+                <span className="text-amber-200/30">·</span>
+                <Link to="/verticals/" className="text-amber-300 hover:underline">
                   Explore Operating Verticals
                 </Link>
               </div>
@@ -497,7 +494,7 @@ CC: neerej.suresan.s@gmail.com`;
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   placeholder="e.g. Anjali Nair"
-                  className="w-full px-3.5 py-2.5 rounded-lg bg-[#07192f] border border-white/20 text-white text-sm focus:outline-none focus:ring-2 focus:ring-blue-400"
+                  className="w-full px-3.5 py-2.5 rounded-lg bg-[#061812] border border-amber-200/20 text-white text-sm focus:outline-none focus:ring-2 focus:ring-amber-400"
                 />
               </div>
 
@@ -513,7 +510,7 @@ CC: neerej.suresan.s@gmail.com`;
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     placeholder="name@example.com"
-                    className="w-full px-3.5 py-2.5 rounded-lg bg-[#07192f] border border-white/20 text-white text-sm focus:outline-none focus:ring-2 focus:ring-blue-400"
+                    className="w-full px-3.5 py-2.5 rounded-lg bg-[#061812] border border-amber-200/20 text-white text-sm focus:outline-none focus:ring-2 focus:ring-amber-400"
                   />
                 </div>
 
@@ -527,7 +524,7 @@ CC: neerej.suresan.s@gmail.com`;
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                     placeholder="+91 98765 43210"
-                    className="w-full px-3.5 py-2.5 rounded-lg bg-[#07192f] border border-white/20 text-white text-sm focus:outline-none focus:ring-2 focus:ring-blue-400"
+                    className="w-full px-3.5 py-2.5 rounded-lg bg-[#061812] border border-amber-200/20 text-white text-sm focus:outline-none focus:ring-2 focus:ring-amber-400"
                   />
                 </div>
               </div>
@@ -541,7 +538,7 @@ CC: neerej.suresan.s@gmail.com`;
                   type="text"
                   value={formData.role}
                   onChange={(e) => setFormData({ ...formData, role: e.target.value })}
-                  className="w-full px-3.5 py-2.5 rounded-lg bg-[#07192f] border border-white/20 text-white text-sm focus:outline-none focus:ring-2 focus:ring-blue-400"
+                  className="w-full px-3.5 py-2.5 rounded-lg bg-[#061812] border border-amber-200/20 text-white text-sm focus:outline-none focus:ring-2 focus:ring-amber-400"
                 />
               </div>
 
@@ -555,7 +552,7 @@ CC: neerej.suresan.s@gmail.com`;
                   value={formData.portfolio}
                   onChange={(e) => setFormData({ ...formData, portfolio: e.target.value })}
                   placeholder="https://..."
-                  className="w-full px-3.5 py-2.5 rounded-lg bg-[#07192f] border border-white/20 text-white text-sm focus:outline-none focus:ring-2 focus:ring-blue-400"
+                  className="w-full px-3.5 py-2.5 rounded-lg bg-[#061812] border border-amber-200/20 text-white text-sm focus:outline-none focus:ring-2 focus:ring-amber-400"
                 />
               </div>
 
@@ -569,7 +566,7 @@ CC: neerej.suresan.s@gmail.com`;
                   value={formData.note}
                   onChange={(e) => setFormData({ ...formData, note: e.target.value })}
                   placeholder="Tell us about your craft, your roots, and what kind of challenges inspire you..."
-                  className="w-full px-3.5 py-2.5 rounded-lg bg-[#07192f] border border-white/20 text-white text-sm focus:outline-none focus:ring-2 focus:ring-blue-400"
+                  className="w-full px-3.5 py-2.5 rounded-lg bg-[#061812] border border-amber-200/20 text-white text-sm focus:outline-none focus:ring-2 focus:ring-amber-400"
                 />
               </div>
 
@@ -577,7 +574,7 @@ CC: neerej.suresan.s@gmail.com`;
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 text-sm font-semibold text-white bg-blue-600 hover:bg-blue-500 rounded-lg shadow-md hover:shadow-blue-500/20 active:scale-[0.99] transition-all cursor-pointer"
+                  className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 text-sm font-semibold text-white bg-red-700 hover:bg-red-600 rounded-lg shadow-md hover:shadow-red-900/30 active:scale-[0.99] transition-all cursor-pointer"
                 >
                   {isSubmitting ? (
                     <span>Preparing Application Email...</span>
@@ -594,25 +591,25 @@ CC: neerej.suresan.s@gmail.com`;
         </div>
 
         {/* Cross-Page Discovery Links */}
-        <div className="pt-8 border-t border-white/10 flex flex-wrap items-center justify-between gap-4 text-xs text-slate-300">
+        <div className="pt-8 border-t border-amber-200/15 flex flex-wrap items-center justify-between gap-4 text-xs text-slate-300">
           <div>
             Questions about working at Njure Group? Contact our team at{' '}
-            <a href="mailto:info@njuregroup.in" className="text-blue-300 hover:underline">
+            <a href="mailto:info@njuregroup.in" className="text-amber-300 hover:underline">
               info@njuregroup.in
             </a>{' '}
             or call{' '}
-            <a href="tel:+918281877050" className="text-blue-300 hover:underline font-mono-numbers">
+            <a href="tel:+918281877050" className="text-amber-300 hover:underline font-mono-numbers">
               +91 8281877050
             </a>.
           </div>
 
           <div className="flex items-center gap-4">
-            <Link to="/verticals/" className="inline-flex items-center gap-1 text-blue-300 hover:text-white transition-colors">
+            <Link to="/verticals/" className="inline-flex items-center gap-1 text-amber-300 hover:text-amber-200 transition-colors">
               <span>Explore All Verticals</span>
               <ArrowUpRight className="w-3.5 h-3.5" />
             </Link>
-            <span className="text-white/20">•</span>
-            <Link to="/about/" className="inline-flex items-center gap-1 text-blue-300 hover:text-white transition-colors">
+            <span className="text-amber-200/30">·</span>
+            <Link to="/about/" className="inline-flex items-center gap-1 text-amber-300 hover:text-amber-200 transition-colors">
               <span>Our Kozhikode Story</span>
               <ArrowUpRight className="w-3.5 h-3.5" />
             </Link>

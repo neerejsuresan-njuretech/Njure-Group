@@ -33,12 +33,12 @@ export const Philosophy: React.FC = () => {
   ];
 
   return (
-    <section id="vision" className="py-20 md:py-28 bg-[#081d36]/80 backdrop-blur-sm border-b border-white/10 relative">
+    <section id="vision" className="py-20 md:py-28 bg-[#071e16]/75 backdrop-blur-sm border-b border-amber-200/15 relative rounded-2xl">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Header */}
         <div className="max-w-3xl mb-16">
-          <div className="text-xs font-semibold uppercase tracking-widest text-blue-400 mb-2">
+          <div className="text-xs font-semibold tracking-wider text-amber-300 mb-2">
             Operating Thesis
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight [text-wrap:balance]">
@@ -57,37 +57,33 @@ export const Philosophy: React.FC = () => {
             return (
               <div
                 key={pillar.index}
-                className="p-8 rounded-2xl bg-[#092548] border border-white/10 hover:border-white/20 transition-all duration-300 flex flex-col justify-between"
+                className="p-8 rounded-2xl bg-[#0b261d] border border-amber-200/15 hover:border-amber-300/30 transition-all duration-300 flex flex-col justify-between"
               >
                 <div>
-                  {/* Editorial Index Number & Icon */}
                   <div className="flex items-center justify-between mb-6">
-                    <span className="text-2xl font-bold text-blue-400 font-mono-numbers">
+                    <span className="text-2xl font-bold text-amber-300 font-mono-numbers">
                       {pillar.index}
                     </span>
-                    <div className="p-2.5 rounded-lg bg-white/5 border border-white/10 text-blue-300">
+                    <div className="p-2.5 rounded-lg bg-white/5 border border-amber-200/15 text-amber-200">
                       <Icon className="w-5 h-5" />
                     </div>
                   </div>
 
-                  {/* Heading */}
                   <h3 className="text-xl font-bold text-white mb-3 leading-snug">
                     {pillar.title}
                   </h3>
 
-                  {/* Summary */}
-                  <p className="text-sm font-medium text-slate-200 mb-3 leading-relaxed">
+                  <p className="text-sm font-medium text-slate-100 mb-3 leading-relaxed">
                     {pillar.summary}
                   </p>
 
-                  {/* Expanded Body */}
-                  <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
+                  <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
                     {pillar.description}
                   </p>
                 </div>
 
-                <div className="mt-6 pt-4 border-t border-white/5 flex items-center text-[11px] font-mono-numbers text-slate-400 uppercase tracking-wider">
-                  <span>Guiding Invariant</span>
+                <div className="mt-6 pt-4 border-t border-white/5 flex items-center text-[11px] font-mono-numbers text-amber-200/70 tracking-wider">
+                  <span>Guiding Principle</span>
                 </div>
               </div>
             );

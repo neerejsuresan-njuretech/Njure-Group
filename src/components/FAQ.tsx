@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ChevronDown, HelpCircle, ArrowRight, MessageSquare } from 'lucide-react';
+import { ChevronDown, ArrowRight, MessageSquare } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 interface FAQItem {
@@ -55,14 +55,13 @@ export const FAQ: React.FC = () => {
   };
 
   return (
-    <section className="py-20 md:py-28 bg-[#07192f]/30 backdrop-blur-sm border-b border-white/10 relative">
+    <section className="py-20 md:py-28 bg-[#061812]/45 backdrop-blur-sm border-b border-amber-200/10 relative">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-        
+
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto space-y-3">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-900/40 border border-blue-400/20 text-xs text-blue-300">
-            <HelpCircle className="w-3.5 h-3.5" />
-            <span>Frequently Asked Questions</span>
+          <div className="text-xs font-semibold tracking-wider text-amber-300">
+            Frequently Asked Questions
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight [text-wrap:balance]">
             Everything You Need to Know
@@ -82,18 +81,18 @@ export const FAQ: React.FC = () => {
                 key={idx}
                 className={`rounded-2xl border transition-all duration-200 overflow-hidden ${
                   isOpen
-                    ? 'bg-[#092548] border-white/20 shadow-xl'
-                    : 'bg-[#081d36] border-white/10 hover:border-white/15'
+                    ? 'bg-[#0e3024] border-amber-300/25 shadow-xl'
+                    : 'bg-[#0b261d] border-amber-200/10 hover:border-amber-200/20'
                 }`}
               >
                 <button
                   type="button"
                   onClick={() => toggleAccordion(idx)}
-                  className="w-full px-6 py-5 flex items-center justify-between text-left gap-4 focus:outline-none cursor-pointer"
+                  className="w-full px-6 py-5 flex items-center justify-between text-left gap-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 cursor-pointer"
                   aria-expanded={isOpen}
                 >
                   <div className="space-y-1">
-                    <span className="text-[11px] font-semibold uppercase tracking-wider text-blue-400 font-mono-numbers">
+                    <span className="text-[11px] font-semibold tracking-wider text-amber-300 font-mono-numbers">
                       {faq.category}
                     </span>
                     <h3 className="text-base sm:text-lg font-bold text-white leading-snug">
@@ -102,8 +101,8 @@ export const FAQ: React.FC = () => {
                   </div>
 
                   <div
-                    className={`p-1.5 rounded-lg border border-white/10 shrink-0 text-slate-400 transition-transform duration-200 ${
-                      isOpen ? 'rotate-180 text-blue-400 bg-white/5' : ''
+                    className={`p-1.5 rounded-lg border border-amber-200/15 shrink-0 text-slate-300 transition-transform duration-200 ${
+                      isOpen ? 'rotate-180 text-amber-300 bg-white/5' : ''
                     }`}
                   >
                     <ChevronDown className="w-4 h-4" />
@@ -111,7 +110,7 @@ export const FAQ: React.FC = () => {
                 </button>
 
                 {isOpen && (
-                  <div className="px-6 pb-6 pt-1 text-sm text-slate-300 leading-relaxed border-t border-white/5">
+                  <div className="px-6 pb-6 pt-1 text-sm text-slate-200 leading-relaxed border-t border-white/5">
                     <p>{faq.answer}</p>
                   </div>
                 )}
@@ -121,16 +120,16 @@ export const FAQ: React.FC = () => {
         </div>
 
         {/* Corporate Support Prompt */}
-        <div className="p-6 rounded-2xl bg-[#081d36] border border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+        <div className="p-6 rounded-2xl bg-[#0b261d] border border-amber-200/15 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
           <div className="flex items-center gap-3">
-            <div className="p-2.5 rounded-xl bg-blue-600/10 border border-blue-400/20 text-blue-400 shrink-0">
+            <div className="p-2.5 rounded-xl bg-amber-500/10 border border-amber-400/20 text-amber-300 shrink-0">
               <MessageSquare className="w-5 h-5" />
             </div>
             <div>
               <h4 className="text-sm font-bold text-white">
                 Have a specialized institutional inquiry?
               </h4>
-              <p className="text-xs text-slate-400">
+              <p className="text-xs text-slate-300">
                 Our executive desk directly answers questions from prospective partners and clients.
               </p>
             </div>
@@ -138,7 +137,7 @@ export const FAQ: React.FC = () => {
 
           <Link
             to="/contact/"
-            className="inline-flex items-center gap-1.5 px-4 py-2 text-xs font-semibold text-white bg-blue-600 hover:bg-blue-500 rounded-lg transition-colors whitespace-nowrap shrink-0"
+            className="inline-flex items-center gap-1.5 px-4 py-2 text-xs font-semibold text-white bg-red-700 hover:bg-red-600 rounded-lg transition-colors whitespace-nowrap shrink-0"
           >
             <span>Contact Corporate Desk</span>
             <ArrowRight className="w-3.5 h-3.5" />

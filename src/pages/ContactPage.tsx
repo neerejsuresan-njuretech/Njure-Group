@@ -109,35 +109,35 @@ Official Inquiries: info@njuregroup.in | +91 8281877050`;
         
         {/* Header */}
         <div className="max-w-3xl space-y-4">
-          <div className="text-xs font-semibold uppercase tracking-widest text-blue-400">
+          <div className="text-xs font-semibold tracking-wider text-amber-300">
             Corporate Communications
           </div>
           <h1 className="text-4xl sm:text-5xl font-extrabold text-white tracking-tight [text-wrap:balance]">
             Partner With Us. Connect with Leadership.
           </h1>
-          <p className="text-lg text-slate-300 leading-relaxed">
+          <p className="text-lg text-slate-200/90 leading-relaxed">
             Whether exploring joint ventures, institutional investments, technology pilots, or community
             handloom partnerships, our corporate desk in Kozhikode welcomes your dialogue.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-          
+
           {/* Left Column: Headquarters Details & Official Logo Resource */}
           <div className="lg:col-span-5 space-y-6">
-            
+
             {/* Headquarters Card */}
-            <div className="p-8 rounded-2xl bg-[#081d36] border border-white/10 space-y-6 shadow-xl">
-              <div className="flex items-center gap-3 text-blue-400">
+            <div className="p-8 rounded-2xl bg-[#0b261d] border border-amber-200/15 space-y-6 shadow-xl">
+              <div className="flex items-center gap-3 text-amber-300">
                 <Building className="w-6 h-6" />
-                <span className="text-sm font-semibold uppercase tracking-wider text-white">
+                <span className="text-sm font-semibold tracking-wider text-white">
                   Corporate Command &amp; Registry
                 </span>
               </div>
 
-              <div className="space-y-4 text-sm text-slate-300">
+              <div className="space-y-4 text-sm text-slate-200">
                 <div>
-                  <div className="text-xs text-slate-400 uppercase tracking-wider mb-1">
+                  <div className="text-xs text-amber-200/75 tracking-wider mb-1">
                     Physical Headquarters
                   </div>
                   <p className="text-white font-medium text-base leading-snug">
@@ -150,32 +150,32 @@ Official Inquiries: info@njuregroup.in | +91 8281877050`;
                   </p>
                 </div>
 
-                <div className="pt-4 border-t border-white/10">
-                  <div className="text-xs text-slate-400 uppercase tracking-wider mb-1">
+                <div className="pt-4 border-t border-amber-200/10">
+                  <div className="text-xs text-amber-200/75 tracking-wider mb-1">
                     Direct Corporate Email
                   </div>
                   <a
                     href="mailto:info@njuregroup.in"
-                    className="text-white hover:text-blue-300 transition-colors font-medium text-base"
+                    className="text-white hover:text-amber-300 transition-colors font-medium text-base"
                   >
                     info@njuregroup.in
                   </a>
                 </div>
 
-                <div className="pt-4 border-t border-white/10">
-                  <div className="text-xs text-slate-400 uppercase tracking-wider mb-1">
+                <div className="pt-4 border-t border-amber-200/10">
+                  <div className="text-xs text-amber-200/75 tracking-wider mb-1">
                     Telephone &amp; Corporate Desk
                   </div>
                   <a
                     href="tel:+918281877050"
-                    className="text-white hover:text-blue-300 transition-colors font-medium font-mono-numbers text-base"
+                    className="text-white hover:text-amber-300 transition-colors font-medium font-mono-numbers text-base"
                   >
                     +91 8281877050
                   </a>
                 </div>
 
-                <div className="pt-4 border-t border-white/10 space-y-2">
-                  <div className="text-xs text-slate-400 uppercase tracking-wider">
+                <div className="pt-4 border-t border-amber-200/10 space-y-2">
+                  <div className="text-xs text-amber-200/75 tracking-wider">
                     Subsidiary Web Portals
                   </div>
                   <div className="flex flex-col gap-1.5 text-xs">
@@ -183,7 +183,7 @@ Official Inquiries: info@njuregroup.in | +91 8281877050`;
                       href="https://tech.njuregroup.in"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 text-sky-400 hover:text-sky-300"
+                      className="inline-flex items-center gap-1.5 text-amber-300 hover:text-amber-200"
                     >
                       <span>tech.njuregroup.in (IT &amp; Voice AI)</span>
                       <ExternalLink className="w-3 h-3" />
@@ -207,18 +207,18 @@ Official Inquiries: info@njuregroup.in | +91 8281877050`;
                   href="https://maps.google.com/?q=Vattoli+Bazar,+Balussery,+Kozhikode,+Kerala+673612"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 text-xs font-semibold text-white bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 rounded-lg transition-colors"
+                  className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 text-xs font-semibold text-white bg-white/5 hover:bg-white/10 border border-amber-200/15 hover:border-amber-200/30 rounded-lg transition-colors"
                 >
-                  <MapPin className="w-3.5 h-3.5 text-blue-400" />
+                  <MapPin className="w-3.5 h-3.5 text-amber-400" />
                   <span>Locate Vattoli Bazar on Google Maps</span>
                 </a>
               </div>
             </div>
 
             {/* Corporate Assurance Card */}
-            <div className="p-6 rounded-2xl bg-[#092548] border border-white/15 space-y-3 shadow-xl">
+            <div className="p-6 rounded-2xl bg-[#0e3024] border border-amber-200/20 space-y-3 shadow-xl">
               <div className="flex items-center gap-3">
-                <div className="p-2.5 rounded-lg bg-blue-500/10 border border-blue-400/20 text-blue-400">
+                <div className="p-2.5 rounded-lg bg-amber-500/10 border border-amber-400/20 text-amber-300">
                   <ShieldCheck className="w-5 h-5" />
                 </div>
                 <div>
@@ -231,7 +231,7 @@ Official Inquiries: info@njuregroup.in | +91 8281877050`;
                 </div>
               </div>
 
-              <p className="text-xs text-slate-300 leading-relaxed">
+              <p className="text-xs text-slate-200 leading-relaxed">
                 All communications submitted through our corporate portal are reviewed with strict confidentiality by the leadership committee within 24 to 48 business hours.
               </p>
             </div>
@@ -240,7 +240,7 @@ Official Inquiries: info@njuregroup.in | +91 8281877050`;
 
           {/* Right Column: Contact Inquiry Form */}
           <div className="lg:col-span-7">
-            <div className="p-8 md:p-10 rounded-2xl bg-[#081d36] border border-white/10 shadow-xl">
+            <div className="p-8 md:p-10 rounded-2xl bg-[#0b261d] border border-amber-200/15 shadow-xl">
               
               {isSubmitted ? (
                 <div className="py-10 flex flex-col items-center text-center space-y-4">
@@ -250,23 +250,23 @@ Official Inquiries: info@njuregroup.in | +91 8281877050`;
                   <h3 className="text-2xl font-bold text-white">
                     Inquiry Formatted for info@njuregroup.in
                   </h3>
-                  <p className="text-sm text-slate-300 max-w-md leading-relaxed">
+                  <p className="text-sm text-slate-200 max-w-md leading-relaxed">
                     Thank you, <strong className="text-white">{formData.name}</strong>. Your corporate message regarding{' '}
-                    <span className="text-blue-300 font-medium">{formData.vertical}</span> has been prepared and linked to our corporate desk.
+                    <span className="text-amber-300 font-medium">{formData.vertical}</span> has been prepared and linked to our corporate desk.
                   </p>
 
-                  <div className="p-4 rounded-xl bg-white/[0.04] border border-white/10 w-full max-w-md text-left text-xs text-slate-300 space-y-1.5">
+                  <div className="p-4 rounded-xl bg-white/[0.04] border border-amber-200/15 w-full max-w-md text-left text-xs text-slate-300 space-y-1.5">
                     <div className="text-slate-400 font-mono text-[11px] uppercase">Destination</div>
                     <div className="text-white font-medium">info@njuregroup.in</div>
                     <div className="text-slate-400 font-mono text-[11px] uppercase pt-1">Subject</div>
-                    <div className="text-sky-300 truncate">[Njure Group Corporate Inquiry] {formData.vertical} - {formData.name}</div>
+                    <div className="text-amber-200 truncate">[Njure Group Corporate Inquiry] {formData.vertical} - {formData.name}</div>
                   </div>
 
                   <div className="flex flex-col sm:flex-row items-center gap-3 pt-2 w-full max-w-md">
                     {mailtoLink && (
                       <a
                         href={mailtoLink}
-                        className="w-full sm:w-1/2 inline-flex items-center justify-center gap-2 px-4 py-2.5 text-xs font-semibold text-white bg-blue-600 hover:bg-blue-500 rounded-lg shadow-lg transition-colors"
+                        className="w-full sm:w-1/2 inline-flex items-center justify-center gap-2 px-4 py-2.5 text-xs font-semibold text-white bg-red-700 hover:bg-red-600 rounded-lg shadow-lg transition-colors"
                       >
                         <Mail className="w-4 h-4" />
                         <span>Launch Mail App</span>
@@ -313,8 +313,8 @@ Official Inquiries: info@njuregroup.in | +91 8281877050`;
                         if (errors.name) setErrors({ ...errors, name: '' });
                       }}
                       placeholder="e.g. Neerej Suresan"
-                      className={`w-full px-4 py-3 rounded-lg bg-[#07192f] border text-white placeholder-slate-500 text-sm focus:outline-none focus:ring-2 focus:ring-blue-400 transition-colors ${
-                        errors.name ? 'border-rose-500' : 'border-white/15'
+                      className={`w-full px-4 py-3 rounded-lg bg-[#061812] border text-white placeholder-slate-500 text-sm focus:outline-none focus:ring-2 focus:ring-amber-400 transition-colors ${
+                        errors.name ? 'border-rose-500' : 'border-amber-200/20'
                       }`}
                     />
                     {errors.name && (
@@ -323,7 +323,7 @@ Official Inquiries: info@njuregroup.in | +91 8281877050`;
                   </div>
 
                   <div>
-                    <label htmlFor="email" className="block text-xs font-medium uppercase tracking-wider text-slate-300 mb-1.5">
+                    <label htmlFor="email" className="block text-xs font-medium tracking-wider text-slate-300 mb-1.5">
                       Email Address <span className="text-rose-400">*</span>
                     </label>
                     <input
@@ -335,8 +335,8 @@ Official Inquiries: info@njuregroup.in | +91 8281877050`;
                         if (errors.email) setErrors({ ...errors, email: '' });
                       }}
                       placeholder="name@organization.com"
-                      className={`w-full px-4 py-3 rounded-lg bg-[#07192f] border text-white placeholder-slate-500 text-sm focus:outline-none focus:ring-2 focus:ring-blue-400 transition-colors ${
-                        errors.email ? 'border-rose-500' : 'border-white/15'
+                      className={`w-full px-4 py-3 rounded-lg bg-[#061812] border text-white placeholder-slate-500 text-sm focus:outline-none focus:ring-2 focus:ring-amber-400 transition-colors ${
+                        errors.email ? 'border-rose-500' : 'border-amber-200/20'
                       }`}
                     />
                     {errors.email && (
@@ -345,7 +345,7 @@ Official Inquiries: info@njuregroup.in | +91 8281877050`;
                   </div>
 
                   <div>
-                    <label htmlFor="org" className="block text-xs font-medium uppercase tracking-wider text-slate-300 mb-1.5">
+                    <label htmlFor="org" className="block text-xs font-medium tracking-wider text-slate-300 mb-1.5">
                       Organization / Company (Optional)
                     </label>
                     <input
@@ -354,19 +354,19 @@ Official Inquiries: info@njuregroup.in | +91 8281877050`;
                       value={formData.organization}
                       onChange={(e) => setFormData({ ...formData, organization: e.target.value })}
                       placeholder="Organization or Venture Name"
-                      className="w-full px-4 py-3 rounded-lg bg-[#07192f] border border-white/15 text-white placeholder-slate-500 text-sm focus:outline-none focus:ring-2 focus:ring-blue-400"
+                      className="w-full px-4 py-3 rounded-lg bg-[#061812] border border-amber-200/20 text-white placeholder-slate-500 text-sm focus:outline-none focus:ring-2 focus:ring-amber-400"
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="vertical" className="block text-xs font-medium uppercase tracking-wider text-slate-300 mb-1.5">
+                    <label htmlFor="vertical" className="block text-xs font-medium tracking-wider text-slate-300 mb-1.5">
                       Vertical / Matter of Focus
                     </label>
                     <select
                       id="vertical"
                       value={formData.vertical}
                       onChange={(e) => setFormData({ ...formData, vertical: e.target.value })}
-                      className="w-full px-4 py-3 rounded-lg bg-[#07192f] border border-white/15 text-white text-sm focus:outline-none focus:ring-2 focus:ring-blue-400"
+                      className="w-full px-4 py-3 rounded-lg bg-[#061812] border border-amber-200/20 text-white text-sm focus:outline-none focus:ring-2 focus:ring-amber-400"
                     >
                       <option value="General Partnership">General Partnership &amp; Executive Desk</option>
                       <option value="Njure Tech">Njure Tech (ITSM &amp; Voice AI Solutions)</option>
@@ -378,7 +378,7 @@ Official Inquiries: info@njuregroup.in | +91 8281877050`;
                   </div>
 
                   <div>
-                    <label htmlFor="message" className="block text-xs font-medium uppercase tracking-wider text-slate-300 mb-1.5">
+                    <label htmlFor="message" className="block text-xs font-medium tracking-wider text-slate-300 mb-1.5">
                       Detailed Inquiries <span className="text-rose-400">*</span>
                     </label>
                     <textarea
@@ -390,8 +390,8 @@ Official Inquiries: info@njuregroup.in | +91 8281877050`;
                         if (errors.message) setErrors({ ...errors, message: '' });
                       }}
                       placeholder="Outline collaboration opportunities, technical trials, or institutional inquiries..."
-                      className={`w-full px-4 py-3 rounded-lg bg-[#07192f] border text-white placeholder-slate-500 text-sm focus:outline-none focus:ring-2 focus:ring-blue-400 transition-colors ${
-                        errors.message ? 'border-rose-500' : 'border-white/15'
+                      className={`w-full px-4 py-3 rounded-lg bg-[#061812] border text-white placeholder-slate-500 text-sm focus:outline-none focus:ring-2 focus:ring-amber-400 transition-colors ${
+                        errors.message ? 'border-rose-500' : 'border-amber-200/20'
                       }`}
                     />
                     {errors.message && (
@@ -403,7 +403,7 @@ Official Inquiries: info@njuregroup.in | +91 8281877050`;
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 text-sm font-semibold text-white bg-blue-600 hover:bg-blue-500 disabled:bg-blue-800 rounded-lg shadow-lg shadow-blue-900/30 transition-all cursor-pointer"
+                      className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 text-sm font-semibold text-white bg-red-700 hover:bg-red-600 disabled:bg-red-900 rounded-lg shadow-lg shadow-red-950/35 transition-all cursor-pointer"
                     >
                       {isSubmitting ? (
                         <span>Preparing Email...</span>

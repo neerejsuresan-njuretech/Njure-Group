@@ -69,7 +69,7 @@ export const SEO_ROUTES: RouteSeoConfig[] = [
       inLanguage: 'en-IN',
     },
     staticHtml: `
-      <div style="background:#07192f;color:#f1f5f9;min-height:100vh;padding:24px;font-family:system-ui,sans-serif;">
+      <div style="background:#061812;color:#f1f5f9;min-height:100vh;padding:24px;font-family:system-ui,sans-serif;">
         ${SHARED_NAV_HTML}
         <main>
           <h1>Njure Group — The Blueprint for a Bolder World</h1>
@@ -130,7 +130,7 @@ export const SEO_ROUTES: RouteSeoConfig[] = [
       ],
     },
     staticHtml: `
-      <div style="background:#07192f;color:#f1f5f9;min-height:100vh;padding:24px;font-family:system-ui,sans-serif;">
+      <div style="background:#061812;color:#f1f5f9;min-height:100vh;padding:24px;font-family:system-ui,sans-serif;">
         ${SHARED_NAV_HTML}
         <main>
           <h1>About Njure Group — Rooted in Kerala, Built for the World</h1>
@@ -177,7 +177,7 @@ export const SEO_ROUTES: RouteSeoConfig[] = [
       ],
     },
     staticHtml: `
-      <div style="background:#07192f;color:#f1f5f9;min-height:100vh;padding:24px;font-family:system-ui,sans-serif;">
+      <div style="background:#061812;color:#f1f5f9;min-height:100vh;padding:24px;font-family:system-ui,sans-serif;">
         ${SHARED_NAV_HTML}
         <main>
           <h1>Operating Divisions &amp; Verticals — Njure Group</h1>
@@ -234,7 +234,7 @@ export const SEO_ROUTES: RouteSeoConfig[] = [
       ],
     },
     staticHtml: `
-      <div style="background:#07192f;color:#f1f5f9;min-height:100vh;padding:24px;font-family:system-ui,sans-serif;">
+      <div style="background:#061812;color:#f1f5f9;min-height:100vh;padding:24px;font-family:system-ui,sans-serif;">
         ${SHARED_NAV_HTML}
         <main>
           <h1>Vision, Human Philosophy &amp; ESG Charter — Njure Group</h1>
@@ -380,7 +380,7 @@ export const SEO_ROUTES: RouteSeoConfig[] = [
       ],
     },
     staticHtml: `
-      <div style="background:#07192f;color:#f1f5f9;min-height:100vh;padding:24px;font-family:system-ui,sans-serif;">
+      <div style="background:#061812;color:#f1f5f9;min-height:100vh;padding:24px;font-family:system-ui,sans-serif;">
         ${SHARED_NAV_HTML}
         <main>
           <h1>Careers &amp; Open Roles at Njure Group</h1>
@@ -432,7 +432,7 @@ export const SEO_ROUTES: RouteSeoConfig[] = [
       ],
     },
     staticHtml: `
-      <div style="background:#07192f;color:#f1f5f9;min-height:100vh;padding:24px;font-family:system-ui,sans-serif;">
+      <div style="background:#061812;color:#f1f5f9;min-height:100vh;padding:24px;font-family:system-ui,sans-serif;">
         ${SHARED_NAV_HTML}
         <main>
           <h1>Contact Njure Group Corporate Desk</h1>

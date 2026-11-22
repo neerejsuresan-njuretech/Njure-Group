@@ -9,8 +9,8 @@
 
   body {
     font-family: var(--font-sans);
-    background-color: #07192f;
-    color: #f1f5f9;
+    background-color: #061812;
+    color: #f8fafc;
     overflow-x: hidden;
   }
 }
@@ -24,12 +24,13 @@
   font-variant-numeric: tabular-nums;
 }
 
-/* Minimal, quiet corporate radial glow */
+/* Festive Midnight Pine & Warm Starlight corporate radial glow */
 .bg-corporate-canvas {
   background-color: transparent;
-  background-image: 
-    radial-gradient(at 0% 0%, rgba(30, 64, 175, 0.15) 0px, transparent 50%),
-    radial-gradient(at 100% 100%, rgba(14, 116, 144, 0.10) 0px, transparent 50%);
+  background-image:
+    radial-gradient(at 0% 0%, rgba(185, 28, 28, 0.14) 0px, transparent 48%),
+    radial-gradient(at 85% 10%, rgba(245, 158, 11, 0.12) 0px, transparent 45%),
+    radial-gradient(at 100% 100%, rgba(16, 185, 129, 0.12) 0px, transparent 52%);
 }
 
 /* Visibly animated Kerala cultural neon keyframes */
@@ -66,7 +67,7 @@
   0%, 100% {
     transform: scale(1) translateY(0px);
     filter: drop-shadow(0 0 12px #fbbf24) drop-shadow(0 0 24px #f59e0b);
-    opacity: 0.85;
+    opacity: 0.88;
   }
   30% {
     transform: scale(1.12) translateY(-4px) skewX(-1.5deg);
@@ -76,12 +77,12 @@
   60% {
     transform: scale(0.96) translateY(2px) skewX(1deg);
     filter: drop-shadow(0 0 14px #f59e0b) drop-shadow(0 0 22px #d97706);
-    opacity: 0.78;
+    opacity: 0.8;
   }
   80% {
     transform: scale(1.16) translateY(-5px);
     filter: drop-shadow(0 0 22px #fef08a) drop-shadow(0 0 38px #fbbf24);
-    opacity: 0.95;
+    opacity: 0.96;
   }
 }
 
@@ -125,11 +126,11 @@
 
 @keyframes keralaNeonLuminous {
   0%, 100% {
-    opacity: 0.58;
+    opacity: 0.56;
     filter: drop-shadow(0 0 10px currentColor) drop-shadow(0 0 24px currentColor);
   }
   50% {
-    opacity: 0.75;
+    opacity: 0.74;
     filter: drop-shadow(0 0 20px currentColor) drop-shadow(0 0 42px currentColor);
   }
 }
@@ -137,11 +138,51 @@
 @keyframes keralaAmbientPulse {
   0%, 100% {
     transform: scale(1) translate(0px, 0px);
-    opacity: 0.22;
+    opacity: 0.20;
   }
   50% {
-    transform: scale(1.3) translate(20px, -20px);
-    opacity: 0.38;
+    transform: scale(1.28) translate(18px, -18px);
+    opacity: 0.36;
+  }
+}
+
+/* Christmas Snowfall, Hanging Nakshatra Star & Fairy Light Keyframes */
+@keyframes christmasSnowfall {
+  0% {
+    transform: translate3d(0, -10vh, 0) rotate(0deg);
+    opacity: 0;
+  }
+  12% {
+    opacity: var(--snow-opacity, 0.75);
+  }
+  88% {
+    opacity: var(--snow-opacity, 0.75);
+  }
+  100% {
+    transform: translate3d(var(--snow-drift, 32px), 108vh, 0) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes christmasStarSwing {
+  0%, 100% {
+    transform: rotate(-3.2deg);
+    transform-origin: top center;
+  }
+  50% {
+    transform: rotate(3.2deg);
+    transform-origin: top center;
+  }
+}
+
+@keyframes christmasBulbTwinkle {
+  0%, 100% {
+    opacity: 0.45;
+    transform: scale(0.92);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.18);
   }
 }
 
@@ -182,3 +223,34 @@
   animation: keralaAmbientPulse 6s ease-in-out infinite;
 }
 
+.animate-christmas-snow {
+  animation: christmasSnowfall var(--snow-duration, 14s) linear infinite;
+  will-change: transform, opacity;
+}
+
+.animate-christmas-star-swing {
+  animation: christmasStarSwing 5.5s ease-in-out infinite;
+  will-change: transform;
+}
+
+.animate-christmas-twinkle {
+  animation: christmasBulbTwinkle 3.2s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-kerala-float-kathakali,
+  .animate-kerala-palm-sway,
+  .animate-kerala-boat-surge,
+  .animate-kerala-flame-flicker,
+  .animate-kerala-nettipattam,
+  .animate-kerala-chenda,
+  .animate-kerala-water-roll,
+  .animate-kerala-neon-glow,
+  .animate-kerala-ambient-orb,
+  .animate-christmas-snow,
+  .animate-christmas-star-swing,
+  .animate-christmas-twinkle {
+    animation: none !important;
+  }
+}

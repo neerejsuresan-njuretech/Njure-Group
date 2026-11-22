@@ -8,6 +8,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 import { KeralaBackground } from './components/KeralaBackground';
+import { ChristmasAtmosphere } from './components/ChristmasAtmosphere';
 import { RouteSEO } from './components/RouteSEO';
 import { HomePage } from './pages/HomePage';
 import { AboutPage } from './pages/AboutPage';
@@ -20,9 +21,12 @@ export default function App() {
   return (
     <Router>
       <RouteSEO />
-      <div className="min-h-screen bg-[#07192f] text-slate-100 flex flex-col font-sans selection:bg-blue-500/30 selection:text-white relative">
-        {/* Subtle Minimal Neon Art Kerala Background Animations */}
+      <div className="min-h-screen bg-[#061812] text-slate-100 flex flex-col font-sans selection:bg-red-700/40 selection:text-amber-100 relative">
+        {/* Visible Animated Kerala Cultural Neon Background (Christmas Edition) */}
         <KeralaBackground />
+
+        {/* Hanging Kerala Nakshatra Christmas Stars & Soft Snowfall */}
+        <ChristmasAtmosphere />
 
         {/* Persistent Multi-Page Navigation */}
         <Navbar />

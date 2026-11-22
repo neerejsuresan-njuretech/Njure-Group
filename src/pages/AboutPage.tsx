@@ -1,21 +1,21 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { MapPin, Heart, Compass, ShieldCheck, Users, Sparkles, Building, ArrowRight } from 'lucide-react';
+import { MapPin, Heart, ShieldCheck, Users, Sparkles, ArrowRight } from 'lucide-react';
 
 export const AboutPage: React.FC = () => {
   return (
     <div className="bg-transparent bg-corporate-canvas py-16 md:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
-        
+
         {/* Page Hero Header */}
         <div className="max-w-3xl space-y-4">
-          <div className="text-xs font-semibold uppercase tracking-widest text-blue-400">
+          <div className="text-xs font-semibold tracking-wider text-amber-300">
             About Njure Group
           </div>
           <h1 className="text-4xl sm:text-5xl font-extrabold text-white tracking-tight [text-wrap:balance]">
             Rooted in Kerala. Guided by Conviction. Building for the World.
           </h1>
-          <p className="text-lg text-slate-300 leading-relaxed">
+          <p className="text-lg text-slate-200/90 leading-relaxed">
             From our headquarters in Vattoli Bazar, Balussery, Kozhikode, we are crafting a new kind
             of corporate conglomerate—one that refuses to trade human soul for cold automation.
           </p>
@@ -23,8 +23,8 @@ export const AboutPage: React.FC = () => {
 
         {/* The Heart of the Story: Narrative Split */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-          
-          <div className="lg:col-span-7 space-y-6 text-slate-300 text-base leading-relaxed">
+
+          <div className="lg:col-span-7 space-y-6 text-slate-200/90 text-base leading-relaxed">
             <h2 className="text-2xl font-bold text-white">
               Why We Call Kozhikode Home
             </h2>
@@ -47,12 +47,12 @@ export const AboutPage: React.FC = () => {
               to build world-class careers without leaving their elders behind.
             </p>
 
-            <div className="p-6 rounded-xl bg-blue-950/40 border border-blue-400/20 space-y-2 mt-4">
-              <div className="flex items-center gap-2 text-blue-300 font-semibold text-sm">
+            <div className="p-6 rounded-xl bg-[#0e3024]/70 border border-amber-300/20 space-y-2 mt-4">
+              <div className="flex items-center gap-2 text-amber-300 font-semibold text-sm">
                 <Heart className="w-4 h-4 text-rose-400" />
                 <span>Our Core Operating Creed</span>
               </div>
-              <p className="text-sm text-slate-200 leading-relaxed italic">
+              <p className="text-sm text-slate-100 leading-relaxed italic">
                 &ldquo;We measure our strength not by the complexity of our algorithms, but by the security
                 we bring to a weaver&apos;s household, the peace of mind we grant an everyday commuter,
                 and the dependable support we deliver to growing businesses.&rdquo;
@@ -62,42 +62,42 @@ export const AboutPage: React.FC = () => {
 
           {/* Right Column: Visual Brand Seal & Location Pin */}
           <div className="lg:col-span-5 space-y-6">
-            
-            <div className="p-8 rounded-2xl bg-[#092548] border border-white/15 space-y-5 shadow-xl">
-              <div className="flex items-center justify-between border-b border-white/10 pb-4">
-                <span className="text-xs uppercase tracking-wider text-blue-300 font-semibold">
+
+            <div className="p-8 rounded-2xl bg-[#0b261d] border border-amber-200/20 space-y-5 shadow-xl">
+              <div className="flex items-center justify-between border-b border-amber-200/10 pb-4">
+                <span className="text-xs tracking-wider text-amber-300 font-semibold">
                   Institutional Heritage
                 </span>
                 <span className="text-xs text-slate-400 font-mono-numbers">
-                  EST. MALABAR
+                  Est. Malabar
                 </span>
               </div>
 
-              <div className="space-y-3 text-sm text-slate-300 leading-relaxed">
+              <div className="space-y-3 text-sm text-slate-200 leading-relaxed">
                 <p>
                   Rooted in the trading heritage of Kozhikode, our business model bridges traditional
                   mercantile ethics with high-velocity modern engineering.
                 </p>
                 <div className="grid grid-cols-2 gap-3 pt-2">
-                  <div className="p-3 rounded-lg bg-white/5 border border-white/5">
+                  <div className="p-3 rounded-lg bg-white/5 border border-amber-200/10">
                     <div className="text-lg font-bold text-white font-mono-numbers">4 Divisions</div>
-                    <div className="text-[11px] text-slate-400">Interlocking Ventures</div>
+                    <div className="text-[11px] text-slate-300">Interlocking Ventures</div>
                   </div>
-                  <div className="p-3 rounded-lg bg-white/5 border border-white/5">
+                  <div className="p-3 rounded-lg bg-white/5 border border-amber-200/10">
                     <div className="text-lg font-bold text-white font-mono-numbers">100% Direct</div>
-                    <div className="text-[11px] text-slate-400">Artisan Accountability</div>
+                    <div className="text-[11px] text-slate-300">Artisan Accountability</div>
                   </div>
                 </div>
               </div>
 
-              <div className="pt-2 text-xs text-slate-400 italic border-t border-white/5">
+              <div className="pt-2 text-xs text-amber-200/80 italic border-t border-white/5">
                 Technical discipline and human dignity moving forward in unison.
               </div>
             </div>
 
             {/* Registered Headquarters Card */}
-            <div className="p-6 rounded-xl bg-[#081d36] border border-white/10 space-y-3">
-              <div className="flex items-center gap-2 text-xs font-semibold text-blue-400 uppercase tracking-wider">
+            <div className="p-6 rounded-xl bg-[#0b261d] border border-amber-200/15 space-y-3">
+              <div className="flex items-center gap-2 text-xs font-semibold text-amber-300 tracking-wider">
                 <MapPin className="w-4 h-4" />
                 <span>Corporate Headquarters</span>
               </div>
@@ -117,7 +117,7 @@ export const AboutPage: React.FC = () => {
         </div>
 
         {/* Leadership & Cultural Principles */}
-        <div className="space-y-8 pt-8 border-t border-white/10">
+        <div className="space-y-8 pt-8 border-t border-amber-200/15">
           <div className="max-w-2xl">
             <h2 className="text-3xl font-bold text-white tracking-tight">
               Our Guiding Principles
@@ -128,10 +128,10 @@ export const AboutPage: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            
-            <div className="p-6 rounded-xl bg-[#081d36] border border-white/10 space-y-3">
-              <div className="w-10 h-10 rounded-lg bg-blue-500/10 border border-blue-400/20 text-blue-400 flex items-center justify-center">
-                <Heart className="w-5 h-5 text-rose-400" />
+
+            <div className="p-6 rounded-xl bg-[#0b261d] border border-amber-200/15 space-y-3">
+              <div className="w-10 h-10 rounded-lg bg-red-600/15 border border-red-400/25 text-rose-300 flex items-center justify-center">
+                <Heart className="w-5 h-5" />
               </div>
               <h3 className="text-base font-bold text-white">
                 Dignity for Labor
@@ -142,8 +142,8 @@ export const AboutPage: React.FC = () => {
               </p>
             </div>
 
-            <div className="p-6 rounded-xl bg-[#081d36] border border-white/10 space-y-3">
-              <div className="w-10 h-10 rounded-lg bg-sky-500/10 border border-sky-400/20 text-sky-400 flex items-center justify-center">
+            <div className="p-6 rounded-xl bg-[#0b261d] border border-amber-200/15 space-y-3">
+              <div className="w-10 h-10 rounded-lg bg-amber-500/10 border border-amber-400/25 text-amber-300 flex items-center justify-center">
                 <ShieldCheck className="w-5 h-5" />
               </div>
               <h3 className="text-base font-bold text-white">
@@ -155,8 +155,8 @@ export const AboutPage: React.FC = () => {
               </p>
             </div>
 
-            <div className="p-6 rounded-xl bg-[#081d36] border border-white/10 space-y-3">
-              <div className="w-10 h-10 rounded-lg bg-amber-500/10 border border-amber-400/20 text-amber-400 flex items-center justify-center">
+            <div className="p-6 rounded-xl bg-[#0b261d] border border-amber-200/15 space-y-3">
+              <div className="w-10 h-10 rounded-lg bg-amber-500/10 border border-amber-400/25 text-amber-300 flex items-center justify-center">
                 <Sparkles className="w-5 h-5" />
               </div>
               <h3 className="text-base font-bold text-white">
@@ -168,8 +168,8 @@ export const AboutPage: React.FC = () => {
               </p>
             </div>
 
-            <div className="p-6 rounded-xl bg-[#081d36] border border-white/10 space-y-3">
-              <div className="w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-400/20 text-emerald-400 flex items-center justify-center">
+            <div className="p-6 rounded-xl bg-[#0b261d] border border-amber-200/15 space-y-3">
+              <div className="w-10 h-10 rounded-lg bg-emerald-500/12 border border-emerald-400/25 text-emerald-300 flex items-center justify-center">
                 <Users className="w-5 h-5" />
               </div>
               <h3 className="text-base font-bold text-white">
@@ -185,18 +185,18 @@ export const AboutPage: React.FC = () => {
         </div>
 
         {/* Bottom CTA to Explore Verticals */}
-        <div className="p-8 md:p-12 rounded-2xl bg-[#092548] border border-white/15 flex flex-col sm:flex-row items-center justify-between gap-6">
+        <div className="p-8 md:p-12 rounded-2xl bg-[#0e3024] border border-amber-200/20 flex flex-col sm:flex-row items-center justify-between gap-6">
           <div>
             <h3 className="text-2xl font-bold text-white">
               See How Our Philosophy Translates to Action
             </h3>
-            <p className="text-sm text-slate-300 mt-1 max-w-xl">
+            <p className="text-sm text-slate-200 mt-1 max-w-xl">
               Inspect our four specialized operating verticals across technology, apparel, local commerce, and clean transport.
             </p>
           </div>
           <Link
             to="/verticals/"
-            className="inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold text-white bg-blue-600 hover:bg-blue-500 rounded-lg transition-colors whitespace-nowrap shrink-0"
+            className="inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold text-white bg-red-700 hover:bg-red-600 rounded-lg transition-colors whitespace-nowrap shrink-0"
           >
             <span>Explore Verticals</span>
             <ArrowRight className="w-4 h-4" />

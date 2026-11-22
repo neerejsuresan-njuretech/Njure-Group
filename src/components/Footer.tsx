@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowUp, ExternalLink, Heart, MapPin, Mail, Phone } from 'lucide-react';
+import { ArrowUp, ExternalLink, MapPin, Mail, Phone } from 'lucide-react';
 import { NjureEmblem } from './Logo';
 
 export const Footer: React.FC = () => {
@@ -9,12 +9,12 @@ export const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="bg-[#051325] text-slate-400 border-t border-white/10 pt-16 pb-12 relative z-10">
+    <footer className="bg-[#04120d] text-slate-300 border-t border-amber-200/15 pt-16 pb-12 relative z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Main Footer Row */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 pb-12 border-b border-white/10">
-          
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 pb-12 border-b border-amber-200/10">
+
           {/* Brand & Purpose Column */}
           <div className="md:col-span-5 space-y-4">
             <Link to="/" className="inline-flex items-center gap-3 group">
@@ -35,61 +35,59 @@ export const Footer: React.FC = () => {
               traditions and sustainable clean mobility.
             </p>
 
-            <div className="pt-2 text-xs text-slate-400 space-y-2">
+            <div className="pt-2 text-xs text-slate-300/90 space-y-2">
               <div className="flex items-center gap-2">
-                <MapPin className="w-3.5 h-3.5 text-blue-400 shrink-0" />
+                <MapPin className="w-3.5 h-3.5 text-amber-400 shrink-0" />
                 <span>Vattoli Bazar, Balussery, Kozhikode, Kerala — 673612</span>
               </div>
               <div className="flex items-center gap-2">
-                <Mail className="w-3.5 h-3.5 text-blue-400 shrink-0" />
-                <a href="mailto:info@njuregroup.in" className="hover:text-white transition-colors">
+                <Mail className="w-3.5 h-3.5 text-amber-400 shrink-0" />
+                <a href="mailto:info@njuregroup.in" className="hover:text-amber-200 transition-colors">
                   info@njuregroup.in
                 </a>
               </div>
               <div className="flex items-center gap-2">
-                <Phone className="w-3.5 h-3.5 text-blue-400 shrink-0" />
-                <a href="tel:+918281877050" className="hover:text-white transition-colors font-mono-numbers">
+                <Phone className="w-3.5 h-3.5 text-amber-400 shrink-0" />
+                <a href="tel:+918281877050" className="hover:text-amber-200 transition-colors font-mono-numbers">
                   +91 8281877050
                 </a>
               </div>
             </div>
-
-
           </div>
 
           {/* Multi-Page Navigation Column */}
           <div className="md:col-span-3 space-y-3">
-            <h4 className="text-xs font-semibold uppercase tracking-wider text-white">
+            <h4 className="text-xs font-semibold tracking-wider text-amber-200">
               Corporate Directory
             </h4>
             <ul className="space-y-2.5 text-sm">
               <li>
-                <Link to="/" className="hover:text-white transition-colors">
+                <Link to="/" className="hover:text-amber-200 transition-colors">
                   Overview &amp; Home
                 </Link>
               </li>
               <li>
-                <Link to="/about/" className="hover:text-white transition-colors">
+                <Link to="/about/" className="hover:text-amber-200 transition-colors">
                   Our Story &amp; Roots
                 </Link>
               </li>
               <li>
-                <Link to="/verticals/" className="hover:text-white transition-colors">
+                <Link to="/verticals/" className="hover:text-amber-200 transition-colors">
                   Operating Ecosystem
                 </Link>
               </li>
               <li>
-                <Link to="/vision/" className="hover:text-white transition-colors">
+                <Link to="/vision/" className="hover:text-amber-200 transition-colors">
                   Vision &amp; Governance
                 </Link>
               </li>
               <li>
-                <Link to="/careers/" className="hover:text-white transition-colors">
+                <Link to="/careers/" className="hover:text-amber-200 transition-colors">
                   Careers &amp; Life at Njure
                 </Link>
               </li>
               <li>
-                <Link to="/contact/" className="hover:text-white transition-colors">
+                <Link to="/contact/" className="hover:text-amber-200 transition-colors">
                   Corporate Inquiries
                 </Link>
               </li>
@@ -98,7 +96,7 @@ export const Footer: React.FC = () => {
 
           {/* Operating Divisions & Live Portals Column */}
           <div className="md:col-span-4 space-y-3">
-            <h4 className="text-xs font-semibold uppercase tracking-wider text-white">
+            <h4 className="text-xs font-semibold tracking-wider text-amber-200">
               Live Venture Portals
             </h4>
             <ul className="space-y-3 text-sm">
@@ -107,9 +105,9 @@ export const Footer: React.FC = () => {
                   href="https://tech.njuregroup.in"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex flex-col p-2.5 rounded-lg bg-white/[0.03] hover:bg-white/[0.08] border border-white/5 transition-all"
+                  className="group flex flex-col p-2.5 rounded-lg bg-[#0b261d]/70 hover:bg-[#0e3024] border border-amber-200/10 transition-all"
                 >
-                  <div className="flex items-center justify-between text-sky-400 group-hover:text-sky-300 font-medium">
+                  <div className="flex items-center justify-between text-amber-200 group-hover:text-amber-100 font-medium">
                     <span>Njure Tech</span>
                     <ExternalLink className="w-3.5 h-3.5" />
                   </div>
@@ -124,7 +122,7 @@ export const Footer: React.FC = () => {
                   href="https://vastrathalam.njuregroup.in"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex flex-col p-2.5 rounded-lg bg-white/[0.03] hover:bg-white/[0.08] border border-white/5 transition-all"
+                  className="group flex flex-col p-2.5 rounded-lg bg-[#0b261d]/70 hover:bg-[#0e3024] border border-amber-200/10 transition-all"
                 >
                   <div className="flex items-center justify-between text-amber-300 group-hover:text-amber-200 font-medium">
                     <span>Vastrathalam</span>
@@ -139,9 +137,9 @@ export const Footer: React.FC = () => {
               <li>
                 <Link
                   to="/verticals/"
-                  className="flex flex-col p-2.5 rounded-lg bg-white/[0.03] hover:bg-white/[0.08] border border-white/5 transition-all"
+                  className="flex flex-col p-2.5 rounded-lg bg-[#0b261d]/70 hover:bg-[#0e3024] border border-amber-200/10 transition-all"
                 >
-                  <div className="flex items-center justify-between text-emerald-400 font-medium">
+                  <div className="flex items-center justify-between text-emerald-300 font-medium">
                     <span>Dozo</span>
                     <span className="text-[11px] text-slate-400">In Development</span>
                   </div>
@@ -154,9 +152,9 @@ export const Footer: React.FC = () => {
               <li>
                 <Link
                   to="/verticals/"
-                  className="flex flex-col p-2.5 rounded-lg bg-white/[0.03] hover:bg-white/[0.08] border border-white/5 transition-all"
+                  className="flex flex-col p-2.5 rounded-lg bg-[#0b261d]/70 hover:bg-[#0e3024] border border-amber-200/10 transition-all"
                 >
-                  <div className="flex items-center justify-between text-blue-400 font-medium">
+                  <div className="flex items-center justify-between text-rose-300 font-medium">
                     <span>B+ Energies</span>
                     <span className="text-[11px] text-slate-400">R&amp;D Phase</span>
                   </div>
@@ -178,12 +176,12 @@ export const Footer: React.FC = () => {
 
           <div className="flex items-center gap-6">
             <span className="font-script text-base text-amber-200/90">
-              The Blueprint for a Bolder World
+              Merry Christmas &amp; Warm Wishes from Kerala
             </span>
 
             <button
               onClick={scrollToTop}
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300 hover:text-white transition-colors cursor-pointer"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 border border-amber-200/15 text-amber-100 hover:text-white transition-colors cursor-pointer"
               aria-label="Back to top"
             >
               <span>Top</span>
